@@ -1,0 +1,78 @@
+export function hideItemMenu() {
+  // Получаем элементы меню и кнопку
+  const navList = document.querySelector('.main__menu>ul');
+  const navMenu = document.querySelector('.main__menu');
+  const ddMenu = document.querySelector('.dd_menu');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  // Скрываем элементы
+  let widthItem = 0;
+  const navItem = document.querySelectorAll('.main__menu>ul > .nav__item');
+  const ddNavItem = document.querySelectorAll('.dd_menu .nav__item');
+
+  const navItemOpen = document.querySelectorAll('.main__menu>ul>.nav__item.open');
+
+  if (navItemOpen.length == navItem.length) {
+    ddMenu.style.display = 'none';
+  }
+  if (navList.offsetWidth > navMenu.offsetWidth) {
+    const itemLength = navItemOpen.length - 1;
+    if (itemLength === -1) return;
+    widthItem = navItemOpen[itemLength].offsetWidth;
+    navItemOpen[itemLength].classList.remove('open');
+    navItemOpen[itemLength].classList.add('hide');
+    ddMenu.style.display = 'block';
+    ddNavItem[itemLength].style.display = 'block';
+    if (navList.offsetWidth > navMenu.offsetWidth) {
+      hideItemMenu();
+    }
+  } else if (
+    navList.offsetWidth + widthItem < navMenu.offsetWidth &&
+    navItemOpen.length !== navItem.length
+  ) {
+    const hide = document.querySelectorAll('.main__menu .hide');
+    const widthChildHide = hide[0].children[0].offsetWidth;
+    if (navList.offsetWidth + widthChildHide > navMenu.offsetWidth) return;
+    navItem[navItemOpen.length].classList.remove('hide');
+    navItem[navItemOpen.length].classList.add('open');
+    widthItem = navItem[navItemOpen.length].offsetWidth;
+    let coutNone = !ddNavItem[navItemOpen.length]
+      ? navItemOpen.length - 1
+      : navItemOpen.length;
+
+    ddNavItem[coutNone].style.display = 'none';
+  }
+}
+
+export function handleDropdownEvent(event) {
+  const target = event.target;
+  const dropdown = target.closest('.submenu');
+  const ddMenu = target.closest('.dd_menu');
+  if (!ddMenu) {
+    console.log('isopen');
+    document.querySelector('.dropdown-menu').classList.remove('open');
+  }
+  if (dropdown) {
+    const direction = determineDropdownDirection(dropdown);
+    dropdown.classList.add('open-' + direction);
+  }
+}
+
+function determineDropdownDirection(dropdown) {
+  const windowWidth = document.documentElement.clientWidth;
+  const dropdownRect = dropdown.getBoundingClientRect();
+  if (dropdownRect.right + dropdownRect.width > windowWidth) {
+    return 'left';
+  } else {
+    return 'right';
+  }
+}
+
+export function burgerMenu() {
+  const burgerMenu = document.querySelector('.burger__menu');
+  const mainMenu = document.querySelector('.main__menu');
+  burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    mainMenu.classList.toggle('active');
+  });
+}

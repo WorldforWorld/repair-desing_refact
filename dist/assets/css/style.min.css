@@ -332,6 +332,11 @@ template {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
 body {
   font-family: "Futura Book", sans-serif;
   font-size: 1rem;
@@ -380,20 +385,6 @@ body {
   color: #ffffff;
 }
 
-header {
-  background-color: #131313;
-  padding: 24px 0;
-}
-header .menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contacts__button {
-  margin-left: 43px;
-}
-
 .logo a {
   text-decoration: none;
   text-transform: uppercase;
@@ -411,12 +402,97 @@ header .menu {
   width: 100%;
 }
 
+.burger__menu {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 20px;
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  .burger__menu {
+    display: block;
+  }
+}
+.burger__menu:before, .burger__menu:after {
+  content: "";
+  background-color: #ffdda7;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.burger__menu:after {
+  bottom: 0;
+}
+.burger__menu span {
+  position: absolute;
+  background-color: #ffdda7;
+  left: 0;
+  top: 9px;
+  width: 100%;
+  height: 2px;
+  transition: all 0.3s ease 0s;
+}
+.burger__menu.active:before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.burger__menu.active:after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+.burger__menu.active span {
+  transform: scale(0);
+}
+
 .main__menu {
-  width: calc(100% - 665px);
+  width: calc(100% - 533px);
+}
+@media (max-width: 1024px) {
+  .main__menu {
+    width: calc(100% - 426px);
+  }
+}
+@media (max-width: 767px) {
+  .main__menu {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #131313;
+    padding: 70px 10px 20px 10px;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+  .main__menu > ul {
+    flex-direction: column;
+  }
+  .main__menu > ul span,
+  .main__menu > ul a {
+    font-size: 1.5rem !important;
+  }
+}
+.main__menu.active {
+  top: 0;
 }
 .main__menu > ul {
   padding: 0 1% !important;
   width: fit-content;
+  margin: 0 auto !important;
+}
+.main__menu > ul > .submenu > ul {
+  left: 0 !important;
+  top: 26px !important;
+}
+.main__menu > ul > .nav__item {
+  overflow: hidden;
+  width: 0;
+}
+.main__menu > ul > .nav__item.open {
+  width: auto;
 }
 .main__menu ul {
   display: flex;
@@ -427,7 +503,28 @@ header .menu {
 .main__menu ul .submenu {
   position: relative;
 }
+.main__menu ul .submenu.open-right > ul {
+  left: 100%;
+}
+@media (max-width: 767px) {
+  .main__menu ul .submenu.open-right > ul {
+    height: auto;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+.main__menu ul .submenu.open-left > ul {
+  right: 100%;
+}
+@media (max-width: 767px) {
+  .main__menu ul .submenu.open-left > ul {
+    height: auto;
+    top: 0 !important;
+    right: 0 !important;
+  }
+}
 .main__menu ul .submenu > ul {
+  top: -15px;
   display: none;
   min-width: 100%;
   flex-direction: column;
@@ -435,9 +532,18 @@ header .menu {
   background-color: #131313;
   padding: 15px 0;
 }
+@media (max-width: 767px) {
+  .main__menu ul .submenu > ul {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+  }
+}
+.main__menu ul .submenu > ul span,
 .main__menu ul .submenu > ul a {
   display: block;
 }
+.main__menu ul .submenu > ul span:hover,
 .main__menu ul .submenu > ul a:hover {
   background-color: red;
 }
@@ -448,6 +554,7 @@ header .menu {
 .main__menu ul a {
   display: block;
   padding: 5px 10px;
+  width: fit-content;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1rem;
@@ -455,6 +562,7 @@ header .menu {
   text-transform: uppercase;
   text-decoration: none;
   transition: color ease-in-out 0.2s;
+  cursor: pointer;
 }
 .main__menu ul span:hover,
 .main__menu ul a:hover {
@@ -464,7 +572,11 @@ header .menu {
 .dd_menu {
   position: relative;
 }
+.dd_menu .nav__item {
+  display: none;
+}
 .dd_menu .dropdown-toggle {
+  display: block;
   cursor: pointer;
   transition: color ease-in-out 0.2s;
 }
@@ -489,6 +601,23 @@ header .menu {
 }
 .dd_menu .dropdown-menu.open {
   display: block;
+}
+
+header {
+  background-color: #131313;
+  padding: 24px 0;
+}
+header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacts {
+  margin-left: 15px;
+}
+.contacts__button {
+  margin-left: 43px;
 }
 
 footer {

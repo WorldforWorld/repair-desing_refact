@@ -1,15 +1,21 @@
+@import 'logo';
+@import 'burger_menu';
+@import 'nav';
+
 header {
-	background-color: $dark;
-	padding: 24px 0;
-	.menu {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+  background-color: $dark;
+  padding: 24px 0;
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .contacts {
+  // padding-left: 15px;
+  margin-left: 15px;
   &__button {
     margin-left: 43px;
-	}
+  }
 }
