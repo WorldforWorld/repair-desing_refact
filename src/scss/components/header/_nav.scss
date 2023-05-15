@@ -28,6 +28,13 @@
     padding: 0 1% !important;
     width: fit-content;
     margin: 0 auto !important;
+    @media (max-width: 767px) {
+      margin: 0 !important;
+      padding: 0 7% !important;
+      li:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
     & > .submenu > ul {
       left: 0 !important;
       top: 26px !important;
@@ -35,8 +42,11 @@
     & > .nav__item {
       overflow: hidden;
       width: 0;
+      @media (max-width: 767px) {
+        overflow: visible;
+        width: auto;
+      }
       &.open {
-        // display: block;
         width: auto;
       }
     }
@@ -48,20 +58,47 @@
     list-style-type: none;
     .submenu {
       position: relative;
-      &.open-right > ul {
-        left: 100%;
-        @media (max-width: 767px) {
-          height: auto;
-          top: 0 !important;
-          left: 0 !important;
+
+      &.open-right {
+        & > span,
+        & > a {
+          &:after {
+            transform: rotate(-90deg);
+          }
+        }
+        &:hover {
+          overflow: visible;
+          width: auto;
+        }
+        & > ul {
+          left: 100%;
+          @media (max-width: 767px) {
+            padding: 15px 0 0;
+            height: auto;
+            top: 0 !important;
+            left: 0 !important;
+            margin-left: 20px;
+          }
         }
       }
-      &.open-left > ul {
-        right: 100%;
-        @media (max-width: 767px) {
-          height: auto;
-          top: 0 !important;
-          right: 0 !important;
+      &.open-left {
+        & > span,
+        & > a {
+          &:after {
+            transform: rotate(-90deg);
+          }
+        }
+        &:hover {
+          overflow: visible;
+          width: auto;
+        }
+        & > ul {
+          right: 100%;
+          @media (max-width: 767px) {
+            height: auto;
+            top: 0 !important;
+            right: 0 !important;
+          }
         }
       }
       & > ul {
@@ -79,9 +116,10 @@
         }
         span,
         a {
-          display: block;
+          display: flex;
           &:hover {
-            background-color: red;
+            background-color: $primary;
+            color: $light;
           }
         }
       }
@@ -91,11 +129,26 @@
         }
       }
     }
+    .submenu {
+      & > span,
+      & > a {
+        display: flex;
+        &::after {
+          content: '›';
+          margin-left: rem(10);
+          font-size: rem(24);
+          transform: rotate(90deg);
+          transform-origin: center;
+          display: flex;
+        }
+      }
+    }
     span,
     a {
       display: block;
       padding: 5px 10px;
       width: fit-content;
+      min-width: 100%;
       font-size: rem(14);
       font-weight: 400;
       line-height: rem(16);
@@ -111,6 +164,10 @@
   }
 }
 .dd_menu {
+  display: none;
+  @media (max-width: 767px) {
+    display: none !important;
+  }
   .nav__item {
     display: none;
   }

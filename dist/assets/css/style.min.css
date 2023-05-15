@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -483,6 +484,15 @@ body {
   width: fit-content;
   margin: 0 auto !important;
 }
+@media (max-width: 767px) {
+  .main__menu > ul {
+    margin: 0 !important;
+    padding: 0 7% !important;
+  }
+  .main__menu > ul li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
 .main__menu > ul > .submenu > ul {
   left: 0 !important;
   top: 26px !important;
@@ -490,6 +500,12 @@ body {
 .main__menu > ul > .nav__item {
   overflow: hidden;
   width: 0;
+}
+@media (max-width: 767px) {
+  .main__menu > ul > .nav__item {
+    overflow: visible;
+    width: auto;
+  }
 }
 .main__menu > ul > .nav__item.open {
   width: auto;
@@ -503,15 +519,31 @@ body {
 .main__menu ul .submenu {
   position: relative;
 }
+.main__menu ul .submenu.open-right > span:after, .main__menu ul .submenu.open-right > a:after {
+  transform: rotate(-90deg);
+}
+.main__menu ul .submenu.open-right:hover {
+  overflow: visible;
+  width: auto;
+}
 .main__menu ul .submenu.open-right > ul {
   left: 100%;
 }
 @media (max-width: 767px) {
   .main__menu ul .submenu.open-right > ul {
+    padding: 15px 0 0;
     height: auto;
     top: 0 !important;
     left: 0 !important;
+    margin-left: 20px;
   }
+}
+.main__menu ul .submenu.open-left > span:after, .main__menu ul .submenu.open-left > a:after {
+  transform: rotate(-90deg);
+}
+.main__menu ul .submenu.open-left:hover {
+  overflow: visible;
+  width: auto;
 }
 .main__menu ul .submenu.open-left > ul {
   right: 100%;
@@ -541,13 +573,25 @@ body {
 }
 .main__menu ul .submenu > ul span,
 .main__menu ul .submenu > ul a {
-  display: block;
+  display: flex;
 }
 .main__menu ul .submenu > ul span:hover,
 .main__menu ul .submenu > ul a:hover {
-  background-color: red;
+  background-color: #E3B873;
+  color: #ffffff;
 }
 .main__menu ul .submenu:hover > ul {
+  display: flex;
+}
+.main__menu ul .submenu > span, .main__menu ul .submenu > a {
+  display: flex;
+}
+.main__menu ul .submenu > span::after, .main__menu ul .submenu > a::after {
+  content: "›";
+  margin-left: 0.625rem;
+  font-size: 1.5rem;
+  transform: rotate(90deg);
+  transform-origin: center;
   display: flex;
 }
 .main__menu ul span,
@@ -555,6 +599,7 @@ body {
   display: block;
   padding: 5px 10px;
   width: fit-content;
+  min-width: 100%;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1rem;
@@ -570,7 +615,13 @@ body {
 }
 
 .dd_menu {
+  display: none;
   position: relative;
+}
+@media (max-width: 767px) {
+  .dd_menu {
+    display: none !important;
+  }
 }
 .dd_menu .nav__item {
   display: none;

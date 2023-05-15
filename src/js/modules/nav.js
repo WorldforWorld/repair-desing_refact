@@ -1,17 +1,21 @@
+export function dropdownToggle() {
+  const ddMenu = document.querySelector('.dd_menu');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  ddMenu.querySelector('.dropdown-toggle').addEventListener('click', () => {
+    dropdownMenu.classList.toggle('open');
+  });
+}
 export function hideItemMenu() {
   // Получаем элементы меню и кнопку
   const navList = document.querySelector('.main__menu>ul');
   const navMenu = document.querySelector('.main__menu');
   const ddMenu = document.querySelector('.dd_menu');
-  const dropdownMenu = document.querySelector('.dropdown-menu');
 
   // Скрываем элементы
   let widthItem = 0;
   const navItem = document.querySelectorAll('.main__menu>ul > .nav__item');
   const ddNavItem = document.querySelectorAll('.dd_menu .nav__item');
-
   const navItemOpen = document.querySelectorAll('.main__menu>ul>.nav__item.open');
-
   if (navItemOpen.length == navItem.length) {
     ddMenu.style.display = 'none';
   }
@@ -44,17 +48,31 @@ export function hideItemMenu() {
   }
 }
 
+export function burgerMenu() {
+  const burgerMenu = document.querySelector('.burger__menu');
+  const mainMenu = document.querySelector('.main__menu');
+  burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    mainMenu.classList.toggle('active');
+  });
+}
+
 export function handleDropdownEvent(event) {
   const target = event.target;
   const dropdown = target.closest('.submenu');
   const ddMenu = target.closest('.dd_menu');
   if (!ddMenu) {
-    console.log('isopen');
     document.querySelector('.dropdown-menu').classList.remove('open');
   }
   if (dropdown) {
     const direction = determineDropdownDirection(dropdown);
     dropdown.classList.add('open-' + direction);
+  } else {
+    const submenus = document.querySelectorAll('.main__menu .submenu');
+    submenus.forEach((submenu) => {
+      submenu.classList.remove('open-left');
+      submenu.classList.remove('open-right');
+    });
   }
 }
 
@@ -66,13 +84,4 @@ function determineDropdownDirection(dropdown) {
   } else {
     return 'right';
   }
-}
-
-export function burgerMenu() {
-  const burgerMenu = document.querySelector('.burger__menu');
-  const mainMenu = document.querySelector('.main__menu');
-  burgerMenu.addEventListener('click', () => {
-    burgerMenu.classList.toggle('active');
-    mainMenu.classList.toggle('active');
-  });
 }
