@@ -1,0 +1,19 @@
+.logo {
+	// max-width: 60px;
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $primary;
+		font-weight: 500;
+		font-size: rem(14);
+		transition: color ease-in-out 0.2s;
+		&:hover {
+			color: $light;
+		}
+	}
+	img {
+		display: inline-block;
+		height: auto;
+		width: 100%;
+	}
+}

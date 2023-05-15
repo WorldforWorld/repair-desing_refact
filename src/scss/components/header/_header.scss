@@ -1,0 +1,15 @@
+header {
+	background-color: $dark;
+	padding: 24px 0;
+	.menu {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.contacts {
+  &__button {
+    margin-left: 43px;
+	}
+}

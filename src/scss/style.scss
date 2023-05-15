@@ -1,18 +1,14 @@
+// settings
+@import "mixin";
+// settings
+@import "normalize";
+@import "variables";
+@import "grid";
 @import "fonts";
-
-body {
-  background-color: #000;
-  span {
-    color: red;
-  }
-  background: url('@img/cover.jpg') 0 0 no-repeat;
-}
-@media (max-width: 768px) {
-  span {
-    font-size: 20px;
-  }
-}@media (max-width: 768px) {
-  body {
-    background-color: green;
-  }
-}
+@import "settings";
+@import "interface";
+// components
+@import "components/header/header";
+@import "components/header/logo";
+@import "components/nav/nav";
+@import "components/footer/footer";
