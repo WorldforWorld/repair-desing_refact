@@ -12,6 +12,9 @@ header {
   background-color: $dark;
   box-shadow: 4px 4px 8px 0px transparent;
   transition: box-shadow ease-in-out 0.2s, padding ease-in-out 0.2s;
+  @media (max-width: 767px) {
+    padding: 12px 0;
+  }
   &.scroll {
     padding: 12px 0;
     box-shadow: 4px 4px 8px 0px rgba($primary, 0.2);
