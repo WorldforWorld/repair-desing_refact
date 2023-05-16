@@ -1,13 +1,13 @@
 export function dropdownToggle() {
-  const ddMenu = document.querySelector('.dd_menu');
-  const dropdownMenu = document.querySelector('.dropdown-menu');
+  const ddMenu = document.querySelector('.main__menu .dd_menu');
+  const dropdownMenu = ddMenu.querySelector('.dropdown-menu');
   ddMenu.querySelector('.dropdown-toggle').addEventListener('click', () => {
     dropdownMenu.classList.toggle('open');
   });
 }
 export function hideItemMenu() {
   // Получаем элементы меню и кнопку
-  const navList = document.querySelector('.main__menu>ul');
+  const navList = document.querySelector('.main__menu > ul');
   const navMenu = document.querySelector('.main__menu');
   const ddMenu = document.querySelector('.dd_menu');
 
@@ -60,11 +60,12 @@ export function burgerMenu() {
 export function handleDropdownEvent(event) {
   const target = event.target;
   const dropdown = target.closest('.submenu');
+  console.log('dropdown: ', dropdown?.parentNode?.parentNode.classList.contains('main__menu'));
   const ddMenu = target.closest('.dd_menu');
   if (!ddMenu) {
     document.querySelector('.dropdown-menu').classList.remove('open');
   }
-  if (dropdown) {
+  if (!dropdown?.parentNode?.parentNode.classList.contains('main__menu')) {
     const direction = determineDropdownDirection(dropdown);
     dropdown.classList.add('open-' + direction);
   } else {
