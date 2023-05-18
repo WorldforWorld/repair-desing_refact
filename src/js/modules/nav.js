@@ -60,13 +60,13 @@ export function burgerMenu() {
 export function handleDropdownEvent(event) {
   const target = event.target;
   const dropdown = target.closest('.submenu');
-  console.log('dropdown: ', dropdown?.parentNode?.parentNode.classList.contains('main__menu'));
   const ddMenu = target.closest('.dd_menu');
   if (!ddMenu) {
     document.querySelector('.dropdown-menu').classList.remove('open');
   }
   if (!dropdown?.parentNode?.parentNode.classList.contains('main__menu')) {
     const direction = determineDropdownDirection(dropdown);
+    if (!direction) return;
     dropdown.classList.add('open-' + direction);
   } else {
     const submenus = document.querySelectorAll('.main__menu .submenu');
@@ -78,6 +78,7 @@ export function handleDropdownEvent(event) {
 }
 
 function determineDropdownDirection(dropdown) {
+  if (!dropdown) return null;
   const windowWidth = document.documentElement.clientWidth;
   const dropdownRect = dropdown.getBoundingClientRect();
   if (dropdownRect.right + dropdownRect.width > windowWidth) {

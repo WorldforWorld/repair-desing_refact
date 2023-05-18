@@ -1,0 +1,33 @@
+<section id="control" class="section section--dark">
+	<div class="container">
+		@@include('../section-title/section-title.html', {"title": "Онлайн контроль", "image":
+		"../assets/img/content/control/control.svg", "alt": "control"})
+		<div class="control__video video" id="player"
+			style="background: url('https://i.ytimg.com/vi/RHzzLqJWqHs/maxresdefault.jpg') no-repeat center / cover;">
+			<script type="text/javascript" id="www-widgetapi-script"
+				src="https://www.youtube.com/s/player/90a441fd/www-widgetapi.vflset/www-widgetapi.js" async=""></script>
+			<script src="https://www.youtube.com/iframe_api"></script>
+			<div class="video__play"></div>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+
+		const videoPlayer = document.querySelector(".video__play")
+		videoPlayer.addEventListener('click', function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				height: '465',
+				width: '100%',
+				videoId: 'RHzzLqJWqHs',
+				events: {
+					'onReady': videoPlay,
+				}
+			});
+		})
+	})
+	function videoPlay(event) {
+		event.target.playVideo();
+	}
+</script>

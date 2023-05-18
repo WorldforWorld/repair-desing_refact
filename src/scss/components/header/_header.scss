@@ -27,11 +27,15 @@ header {
 }
 
 .contacts {
-  margin-left: 15px;
+  margin-left: rem(15);
   @media (max-width: 540px) {
-    display: none;
+    margin-left: auto;
+    margin-right: rem(15);
+    &__button {
+      display: none;
+    }
   }
   &__button {
-    margin-left: 43px;
+    margin-left: rem(43);
   }
 }

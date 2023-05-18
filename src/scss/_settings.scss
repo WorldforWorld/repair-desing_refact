@@ -12,8 +12,73 @@ body {
 }
 .section {
   padding: 60px 0;
+  @media (max-width: 767px) {
+    padding: 36px 0;
+  }
   &--dark {
     background-color: $dark;
     color: $light !important;
+  }
+}
+.mb-17 {
+  margin-bottom: rem(34);
+}
+.text {
+  &__uppercase {
+    text-transform: uppercase;
+  }
+  &__primary {
+    color: $primary;
+  }
+  &__light {
+    color: $light;
+  }
+}
+.after__line {
+  &::after {
+    content: '';
+    display: inline-block;
+    width: rem(92);
+    height: rem(1);
+    margin-left: rem(32);
+    background-color: currentColor;
+    line-height: 100%;
+    transform: translateY(-600%);
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Yeseva One';
+  font-weight: 400;
+  font-size: rem(20);
+  line-height: rem(28);
+  h2 {
+    margin-bottom: rem(20);
+  }
+  .image {
+    max-width: rem(32);
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: calc(100% + 10px);
+      top: 50%;
+      display: flex;
+      width: rem(32);
+      height: rem(1);
+      border-radius: rem(30);
+      background-color: $primary;
+    }
+    &::before {
+      right: calc(100% + 10px);
+      left: auto;
+    }
   }
 }

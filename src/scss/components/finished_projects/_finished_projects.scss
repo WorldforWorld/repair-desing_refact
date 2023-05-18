@@ -1,0 +1,53 @@
+.projects {
+  font-weight: 400;
+  font-size: rem(18);
+  .row {
+    @media (max-width: 767px) {
+      flex-direction: column;
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+  &__desc {
+    max-width: rem(440);
+    font-family: 'Futura Book';
+    line-height: rem(29);
+    color: $light;
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 9px;
+    font-family: 'Yeseva One';
+    line-height: rem(25);
+    color: $primary;
+  }
+  &__subtitle {
+    display: flex;
+    font-family: 'Futura Book';
+    font-size: rem(15);
+    line-height: rem(20);
+    color: $light;
+  }
+  &__swiper {
+    &--left {
+      max-width: rem(440);
+      margin-top: rem(42);
+      margin-left: 0;
+      @media (max-width: 767px) {
+        margin-left: auto;
+        .swiper-navigation {
+          margin-top: rem(35);
+        }
+      }
+    }
+    &--right {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

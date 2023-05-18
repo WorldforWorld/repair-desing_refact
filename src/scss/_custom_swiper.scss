@@ -1,0 +1,39 @@
+.swiper {
+  &-navigation {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+    margin-top: rem(80);
+  }
+  &-pagination {
+    position: static;
+    display: flex;
+    gap: rem(18);
+    width: auto !important;
+    & > span {
+      width: rem(10);
+      height: rem(10);
+      margin: 0 !important;
+      background-color: $light;
+    }
+  }
+  &-button {
+    &-next,
+    &-prev {
+      position: static;
+      width: rem(41);
+      height: rem(13);
+      margin: 0;
+      background: url('../img/theme/arrow-slide.svg') no-repeat center/cover;
+      opacity: 1 !important;
+      &:after {
+        display: none;
+      }
+    }
+
+    &-next {
+      transform: rotate(180deg);
+      transform-origin: center;
+    }
+  }
+}

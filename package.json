@@ -21,6 +21,9 @@
     "url": "https://github.com/WorldforWorld/control_test/issues"
   },
   "homepage": "https://github.com/WorldforWorld/control_test#readme",
+	"dependencies": {
+    "swiper": "latest"
+	},
   "devDependencies": {
     "browser-sync": "latest",
     "del": "latest",
@@ -50,7 +53,6 @@
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
     "sass": "latest",
-    "swiper": "latest",
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",

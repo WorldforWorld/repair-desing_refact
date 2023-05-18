@@ -1,5 +1,6 @@
 import * as nav from './modules/nav.js';
 import * as scroll from './modules/scroll-header.js';
+import { slider } from './modules/projects-slider.js';
 document.addEventListener('DOMContentLoaded', function () {
   // Скролл для шапки
   scroll.addClassScroll();
@@ -16,4 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Бургер меню
   nav.burgerMenu();
+  // Инициализируем слайдер в секции projects
+  slider();
 });

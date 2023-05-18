@@ -2,5 +2,23 @@
   width: 100%;
   max-width: $container + 30px;
   margin: auto;
-	padding: 0 15px;
+  padding: 0 15px;
+}
+.col-50 {
+  width: 50%;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
+.columns-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.gap-15 {
+  gap: rem(30);
+}
+.gap-row-17 {
+  row-gap: rem(34);
 }
