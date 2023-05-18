@@ -1,0 +1,35 @@
+.control__video {
+  display: flex;
+  max-width: rem(816);
+  aspect-ratio: 2/1;
+  margin: 0 auto;
+  position: relative;
+  .video__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width ease-in-out 0.2s, height ease-in-out 0.2s;
+    cursor: pointer;
+    &:hover {
+      width: 86px;
+      height: 86px;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 0px;
+      height: 0px;
+      border: 8px solid transparent;
+      border-left: 14px solid $light;
+      transform: translateX(6px);
+    }
+  }
+}
