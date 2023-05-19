@@ -1,1 +1,36 @@
 @import './offer_form';
+.offer {
+  @media (max-width: 860px) {
+    display: none;
+  }
+  &__bg {
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__bank {
+    display: flex;
+    gap: rem(25);
+    align-items: center;
+    margin-top: rem(38);
+    margin-left: rem(30);
+    color: $primary;
+    font-family: 'Futura Demi';
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: rem(25);
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(72);
+      height: rem(72);
+      background-color: $primary;
+      border-radius: 50%;
+      img {
+        width: rem(39);
+        height: auto;
+      }
+    }
+  }
+}

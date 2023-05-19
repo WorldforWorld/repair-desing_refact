@@ -1593,16 +1593,40 @@ header .menu {
   margin: 62px auto 0;
 }
 .control__form form {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 3rem;
   row-gap: 2.3125rem;
+}
+.control__form form .button,
+.control__form form .form__group {
+  width: 100%;
+  min-width: 9.9375rem;
+  max-width: 14.375rem;
+}
+@media (max-width: 440px) {
+  .control__form form .button,
+  .control__form form .form__group {
+    max-width: 100%;
+  }
+}
+.control__form form .button {
+  max-width: 12.4375rem;
+}
+@media (max-width: 440px) {
+  .control__form form .button {
+    max-width: 100%;
+  }
+}
+.control__form form .policy {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .form__wrap .policy {
   display: flex;
   justify-content: center;
-  grid-column: 1/4;
 }
 .form__wrap .policy label {
   position: relative;
@@ -1681,6 +1705,11 @@ header .menu {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
   background-color: #ffffff;
 }
+@media (max-width: 767px) {
+  .card__section {
+    margin-left: 0;
+  }
+}
 .card__title {
   font-family: "Yeseva One";
   font-weight: 400;
@@ -1719,7 +1748,7 @@ header .menu {
 .repair .row {
   gap: 1.875rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .offer__form {
@@ -1764,6 +1793,42 @@ header .menu {
 }
 .offer__form .policy label {
   color: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .offer {
+    display: none;
+  }
+}
+.offer__bg {
+  width: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.offer__bank {
+  display: flex;
+  gap: 1.5625rem;
+  align-items: center;
+  margin-top: 2.375rem;
+  margin-left: 1.875rem;
+  color: #E3B873;
+  font-family: "Futura Demi";
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+.offer__bank__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #E3B873;
+  border-radius: 50%;
+}
+.offer__bank__image img {
+  width: 2.4375rem;
+  height: auto;
 }
 
 footer {

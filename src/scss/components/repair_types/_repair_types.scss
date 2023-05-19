@@ -14,6 +14,9 @@
     padding: 25px 34px 49px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     background-color: $light;
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
   }
   &__title {
     font-family: 'Yeseva One';
@@ -56,6 +59,6 @@
   .row {
     gap: rem(30);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
