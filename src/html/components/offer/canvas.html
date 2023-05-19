@@ -1,0 +1,60 @@
+<div class="canvas">
+	<canvas id="myCanvas"></canvas>
+</div>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		// Generate code GPT
+		const ddd = 636
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		// Задаем размеры холста на основе размеров окна браузера
+		canvas.width = document.querySelector('.canvas').offsetWidth;
+		canvas.height = ddd;
+
+		var centerX = 50;
+		var centerY = canvas.height / 2;
+		var radius = ddd / 2 - 2;
+		const textArr = ["Наш специалист приедет для замеров в день \n контакта или назначит удобную для вас дату", "Бесплатный замер", "Бесплатная консультация", "Получите смету расходов и сроки \n вашего будущего ремонта"]
+		// Рисуем окружность
+		context.beginPath();
+		context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+		context.strokeStyle = "#E3B873";
+		context.stroke();
+		context.closePath();
+
+		// Располагаем кружки с цифрами
+		var numCircles = 4;
+		var angleStep = 0.6 * Math.PI / numCircles;
+
+		for (var i = 0; i < numCircles; i++) {
+			var angle = (3 * Math.PI / 2) + angleStep * i + 0.85;
+
+			// Вычисляем координаты центра кружка
+			var circleX = centerX + Math.cos(angle) * radius;
+			var circleY = centerY - Math.sin(angle) * radius;
+
+			// Рисуем кружок
+			context.beginPath();
+			context.arc(circleX, circleY, 20, 0, 2 * Math.PI);
+			context.fillStyle = "#E3B873";
+			context.fill();
+			context.closePath();
+
+			// Рисуем цифру внутри кружка
+			context.fillStyle = "white";
+			context.font = "18px 'Yeseva One'";
+			context.textAlign = "center";
+			context.textBaseline = "middle";
+			context.fillText('0' + (i - numCircles) * (-1), circleX, circleY);
+
+			// Выводим текст рядом с кружком
+			var text = textArr[i];
+			var textX = circleX + 30;
+			var textY = circleY;
+			context.fillStyle = "#363636";
+			context.font = "18px 'Futura Book'";
+			context.textAlign = "left";
+			context.fillText(text, textX, textY);
+		}
+	})
+</script>

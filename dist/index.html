@@ -379,22 +379,26 @@
 			сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте
 			заявку ниже чтобы получить ссылку на трансляцию.
 		</p>
-		<div class="form__wrap control__form">
-	<form action="#">
-		<div class="form__group control__form__group">
-			<label for="user-name">Имя</label>
-			<input type="text" id="user-name" placeholder="Как вас зовут:">
-		</div>
-		<div class="form__group control__form__group">
-			<label for="user-phone">Телефон</label>
-			<input type="text" id="user-phone" placeholder="Ваш номер телефона:">
-		</div>
-		<button class="button button--primary control__button">Отправить</button>
-		<div class="control__policy policy">
-			<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
-			<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
-		</div>
+		<div class="control__form">
+	<div class=" form__wrap">
+		
+		<form action="#">
+			 <div class="form__group">
+				<label for="user-name">Имя</label>
+				<input type="text" id="user-name" placeholder="Как вас зовут:">
+	</div>
+	 <div class="form__group">
+				<label for="user-phone">Телефон</label>
+				<input type="text" id="user-phone" placeholder="Ваш номер телефона:">
+	</div>
+	
+	<button class="button button--primary">Отправить</button>
+	<div class="policy">
+		<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
+		<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+	</div>
 	</form>
+</div>
 </div>
 	</div>
 </section>
@@ -457,29 +461,25 @@
 </section>
 		<section class="section">
 	<div class="container">
-		<div class="row">
-			<div class="col-50">
-				<canvas id="myCanvas" width="760" height="638"></canvas>
-			</div>
-			<div class="col-50">
-				<!-- а вот здесь нужно уже работать как-то с формой обратной связи -->
-			</div>
-		</div>
-	</div>
-</section>
+		<div class="row" style="gap: 30px;">
+			<div style="width: 100%;">
+				<div class="canvas">
+	<canvas id="myCanvas"></canvas>
+</div>
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		// Generate code GPT
+		const ddd = 636
 		var canvas = document.getElementById("myCanvas");
 		var context = canvas.getContext("2d");
 		// Задаем размеры холста на основе размеров окна браузера
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		canvas.width = document.querySelector('.canvas').offsetWidth;
+		canvas.height = ddd;
 
 		var centerX = 50;
 		var centerY = canvas.height / 2;
-		var radius = 318;
-		const textArr = ["Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату", "Бесплатный замер", "Бесплатная консультация", "Получите смету расходов и сроки вашего будущего ремонта"]
+		var radius = ddd / 2 - 2;
+		const textArr = ["Наш специалист приедет для замеров в день \n контакта или назначит удобную для вас дату", "Бесплатный замер", "Бесплатная консультация", "Получите смету расходов и сроки \n вашего будущего ремонта"]
 		// Рисуем окружность
 		context.beginPath();
 		context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
@@ -489,10 +489,10 @@
 
 		// Располагаем кружки с цифрами
 		var numCircles = 4;
-		var angleStep = Math.PI / numCircles;
+		var angleStep = 0.6 * Math.PI / numCircles;
 
 		for (var i = 0; i < numCircles; i++) {
-			var angle = (3 * Math.PI / 2) + angleStep * i + 0.35;
+			var angle = (3 * Math.PI / 2) + angleStep * i + 0.85;
 
 			// Вычисляем координаты центра кружка
 			var circleX = centerX + Math.cos(angle) * radius;
@@ -507,25 +507,61 @@
 
 			// Рисуем цифру внутри кружка
 			context.fillStyle = "white";
-			context.font = "regular 18px Yeseva One";
+			context.font = "18px 'Yeseva One'";
 			context.textAlign = "center";
 			context.textBaseline = "middle";
-			context.fillText('0' + (i + 1), circleX, circleY);
+			context.fillText('0' + (i - numCircles) * (-1), circleX, circleY);
 
 			// Выводим текст рядом с кружком
 			var text = textArr[i];
 			var textX = circleX + 30;
 			var textY = circleY;
 			context.fillStyle = "#363636";
-			context.font = "medium 18px Futura Book";
+			context.font = "18px 'Futura Book'";
 			context.textAlign = "left";
 			context.fillText(text, textX, textY);
 		}
-
-
 	})
-
 </script>
+			</div>
+			<div>
+				<div class="offer__form">
+	<div class=" form__wrap">
+		
+		<span class="form__title">Оставьте заявку на бесплатный <br>выезд замерщика</span>
+		
+		<form action="#">
+			 <div class="form__group">
+				<label for="user-name">Имя</label>
+				<input type="text" id="user-name" placeholder="Как вас зовут:">
+	</div>
+	 <div class="form__group">
+				<label for="user-phone">Телефон</label>
+				<input type="text" id="user-phone" placeholder="Ваш телефон:">
+	</div>
+	 <div class="form__group">
+				<label for="user-mail">Имя</label>
+				<input type="email" id="user-mail" placeholder="Ваш email:">
+	</div>
+	
+	<button class="button button--primary">Вызвать замерщика</button>
+	<div class="policy">
+		<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
+		<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+	</div>
+	</form>
+</div>
+</div>
+				<div class="offer__bank">
+					<div class="offer__bank__image">
+						<img src="../assets/content/offer/bank.svg" alt="bank">
+					</div>
+					<span class="offer__bank__title">Это поможет сэкономить 10 - 20% от стоимости материалов</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 		<!-- <span>Привет!</span> -->
 		<!-- <img src="assets/img/cover.jpg" alt=""> -->
 	</main>

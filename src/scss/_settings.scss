@@ -20,6 +20,12 @@ body {
     color: $light !important;
   }
 }
+.row {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
 .mt-15 {
   margin-top: rem(30);
 }

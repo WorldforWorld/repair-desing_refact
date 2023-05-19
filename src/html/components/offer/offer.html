@@ -1,71 +1,28 @@
 <section class="section">
 	<div class="container">
-		<div class="row">
-			<div class="col-50">
-				<canvas id="myCanvas" width="760" height="638"></canvas>
+		<div class="row" style="gap: 30px;">
+			<div style="width: 100%;">
+				@@include('./canvas.html',{})
 			</div>
-			<div class="col-50">
-				<!-- а вот здесь нужно уже работать как-то с формой обратной связи -->
+			<div>
+				@@include('../from_submit/from_submit.html',
+				{
+				"title":"Оставьте заявку на бесплатный <br>выезд замерщика",
+				"selector":"offer__form",
+				"text_btn": "Вызвать замерщика",
+				"formGroup": [
+				{"idInput": "user-name", "type":"text","name":"Имя","placeholder":"Как вас зовут:"},
+				{"idInput": "user-phone", "type":"text","name":"Телефон","placeholder":"Ваш телефон:"},
+				{"idInput": "user-mail", "type":"email","name":"Имя","placeholder":"Ваш email:"},
+				]
+				})
+				<div class="offer__bank">
+					<div class="offer__bank__image">
+						<img src="../assets/content/offer/bank.svg" alt="bank">
+					</div>
+					<span class="offer__bank__title">Это поможет сэкономить 10 - 20% от стоимости материалов</span>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<script>
-	document.addEventListener("DOMContentLoaded", () => {
-		// Generate code GPT
-		var canvas = document.getElementById("myCanvas");
-		var context = canvas.getContext("2d");
-		// Задаем размеры холста на основе размеров окна браузера
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
-
-		var centerX = 50;
-		var centerY = canvas.height / 2;
-		var radius = 318;
-		const textArr = ["Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату", "Бесплатный замер", "Бесплатная консультация", "Получите смету расходов и сроки вашего будущего ремонта"]
-		// Рисуем окружность
-		context.beginPath();
-		context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-		context.strokeStyle = "#E3B873";
-		context.stroke();
-		context.closePath();
-
-		// Располагаем кружки с цифрами
-		var numCircles = 4;
-		var angleStep = Math.PI / numCircles;
-
-		for (var i = 0; i < numCircles; i++) {
-			var angle = (3 * Math.PI / 2) + angleStep * i + 0.35;
-
-			// Вычисляем координаты центра кружка
-			var circleX = centerX + Math.cos(angle) * radius;
-			var circleY = centerY - Math.sin(angle) * radius;
-
-			// Рисуем кружок
-			context.beginPath();
-			context.arc(circleX, circleY, 20, 0, 2 * Math.PI);
-			context.fillStyle = "#E3B873";
-			context.fill();
-			context.closePath();
-
-			// Рисуем цифру внутри кружка
-			context.fillStyle = "white";
-			context.font = "regular 18px Yeseva One";
-			context.textAlign = "center";
-			context.textBaseline = "middle";
-			context.fillText('0' + (i + 1), circleX, circleY);
-
-			// Выводим текст рядом с кружком
-			var text = textArr[i];
-			var textX = circleX + 30;
-			var textY = circleY;
-			context.fillStyle = "#363636";
-			context.font = "medium 18px Futura Book";
-			context.textAlign = "left";
-			context.fillText(text, textX, textY);
-		}
-
-
-	})
-
-</script>

@@ -25,5 +25,11 @@
   &__form {
     max-width: rem(768);
     margin: 62px auto 0;
+		form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2.3125rem;
+}
   }
 }

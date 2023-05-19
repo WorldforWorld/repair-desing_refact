@@ -1,11 +1,5 @@
 .form {
   &__wrap {
-    form {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: rem(48);
-      row-gap: rem(37);
-    }
     .policy {
       display: flex;
       justify-content: center;
@@ -71,6 +65,7 @@
       box-shadow: none;
       border: none;
       border-bottom: 1px solid $text;
+      padding-bottom: rem(12);
     }
   }
 }

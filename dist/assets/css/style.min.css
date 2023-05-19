@@ -380,6 +380,14 @@ body {
   color: #ffffff !important;
 }
 
+.row {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 .mt-15 {
   margin-top: 1.875rem;
 }
@@ -1584,13 +1592,13 @@ header .menu {
   max-width: 48rem;
   margin: 62px auto 0;
 }
-
-.form__wrap form {
+.control__form form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3rem;
   row-gap: 2.3125rem;
 }
+
 .form__wrap .policy {
   display: flex;
   justify-content: center;
@@ -1654,6 +1662,7 @@ header .menu {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #363636;
+  padding-bottom: 0.75rem;
 }
 
 .card__wrap {
@@ -1711,6 +1720,50 @@ header .menu {
   gap: 1.875rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+}
+
+.offer__form {
+  width: 31.5625rem;
+  max-width: 31.5625rem;
+  background-color: #131313;
+  padding: 28px 48px;
+  color: #ffffff;
+}
+.offer__form .form__title {
+  display: block;
+  margin-bottom: 2.4375rem;
+  font-family: "Futura Demi";
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  text-align: center;
+}
+.offer__form form {
+  display: flex;
+  flex-direction: column;
+}
+.offer__form .button {
+  order: 1;
+  margin-left: auto;
+  margin-top: 2.375rem;
+}
+.offer__form .form__group:not(:first-child) {
+  margin-top: 3rem;
+}
+.offer__form .form__group label {
+  color: #ffffff;
+  opacity: 0.5;
+}
+.offer__form .form__group input::placeholder {
+  color: #ffffff;
+}
+.offer__form .policy {
+  justify-content: flex-start;
+  margin-left: 1.875rem;
+  margin-top: 1rem;
+}
+.offer__form .policy label {
+  color: #ffffff;
 }
 
 footer {

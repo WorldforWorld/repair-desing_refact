@@ -9,6 +9,14 @@
 			сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте
 			заявку ниже чтобы получить ссылку на трансляцию.
 		</p>
-		@@include('./from_submit.html')
+		@@include('../from_submit/from_submit.html', {
+		"title":"null",
+		"selector": "control__form",
+		"text_btn": "Отправить",
+		"formGroup": [
+		{"idInput": "user-name", "type":"text","name":"Имя","placeholder":"Как вас зовут:"},
+		{"idInput": "user-phone", "type":"text","name":"Телефон","placeholder":"Ваш номер телефона:"}
+		]
+		})
 	</div>
 </section>
