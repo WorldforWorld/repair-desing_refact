@@ -347,22 +347,19 @@
 		<img src="../assets/img/content/control/control.svg" alt="control">
 	</div>
 </div>
-		<div class="control__video video" id="player"
-			style="background: url('https://i.ytimg.com/vi/RHzzLqJWqHs/maxresdefault.jpg') no-repeat center / cover;">
-			<script type="text/javascript" id="www-widgetapi-script"
-				src="https://www.youtube.com/s/player/90a441fd/www-widgetapi.vflset/www-widgetapi.js" async=""></script>
-			<script src="https://www.youtube.com/iframe_api"></script>
-			<div class="video__play"></div>
-		</div>
-	</div>
-</section>
+		<div class="video mt-15 mb-31" id="player-RHzzLqJWqHs"
+	style="background: url('https://i.ytimg.com/vi/RHzzLqJWqHs/maxresdefault.jpg') no-repeat center / cover;">
+	<script type="text/javascript" id="www-widgetapi-script"
+		src="https://www.youtube.com/s/player/90a441fd/www-widgetapi.vflset/www-widgetapi.js" async=""></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<div class="video__play" id="RHzzLqJWqHs"></div>
+</div>
 
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
-
-		const videoPlayer = document.querySelector(".video__play")
+		const videoPlayer = document.querySelector("#RHzzLqJWqHs")
 		videoPlayer.addEventListener('click', function onYouTubeIframeAPIReady() {
-			player = new YT.Player('player', {
+			player = new YT.Player('player-RHzzLqJWqHs', {
 				height: '465',
 				width: '100%',
 				videoId: 'RHzzLqJWqHs',
@@ -375,6 +372,159 @@
 	function videoPlay(event) {
 		event.target.playVideo();
 	}
+</script>
+		<p class="control__desc control__top__line">
+			На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на
+			наш
+			сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте
+			заявку ниже чтобы получить ссылку на трансляцию.
+		</p>
+		<div class="form__wrap control__form">
+	<form action="#">
+		<div class="form__group control__form__group">
+			<label for="user-name">Имя</label>
+			<input type="text" id="user-name" placeholder="Как вас зовут:">
+		</div>
+		<div class="form__group control__form__group">
+			<label for="user-phone">Телефон</label>
+			<input type="text" id="user-phone" placeholder="Ваш номер телефона:">
+		</div>
+		<button class="button button--primary control__button">Отправить</button>
+		<div class="control__policy policy">
+			<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
+			<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+		</div>
+	</form>
+</div>
+	</div>
+</section>
+		<section class="section repair">
+	<div class="container">
+		<div class="section-title">
+	<h2 class="text__uppercase text-title text__ligth">Виды ремонта</h2>
+	<div class="image">
+		<img src="../assets/img/content/repair_types/repair_types.svg" alt="repair_types">
+	</div>
+</div>
+		<div class="row d-flex">
+			<div class="card__wrap">
+	<div class="card__image">
+		<img src="../assets/img/content/repair_types/type-1.jpg" alt="type-1">
+	</div>
+	<div class="card__section">
+		<h3 class="card__title">Косметический ремонт</h3>
+		<div class="card__desc">
+			<ul>
+				 <li>Демонтаж старых покрытий</li> <li>Поклейка обоев</li> <li>Роспись стен и потолков</li> <li>Укладка полов</li>
+					 <li>Замена сантехники</li> <li>Замена розеток и выключателей</li> <li>Замена дверей</li>
+			</ul>
+		</div>
+		<strong class="card__pricetag">от 900 РУБ / m <sup>2</sup></strong>
+	</div>
+</div>
+			<div class="card__wrap">
+	<div class="card__image">
+		<img src="../assets/img/content/repair_types/type-2.jpg" alt="type-2">
+	</div>
+	<div class="card__section">
+		<h3 class="card__title">Капитальный ремонт</h3>
+		<div class="card__desc">
+			<ul>
+				 <li>Демонтаж старых покрытий</li> <li>Поклейка обоев</li> <li>Роспись стен и потолков</li> <li>Укладка полов</li>
+					 <li>Замена сантехники</li> <li>Замена розеток и выключателей</li> <li>Замена дверей</li>
+			</ul>
+		</div>
+		<strong class="card__pricetag">от 1800 РУБ / m <sup>2</sup></strong>
+	</div>
+</div>
+			<div class="card__wrap">
+	<div class="card__image">
+		<img src="../assets/img/content/repair_types/type-3.jpg" alt="type-3">
+	</div>
+	<div class="card__section">
+		<h3 class="card__title">Дизайнерский ремонт</h3>
+		<div class="card__desc">
+			<ul>
+				 <li>Демонтаж старых покрытий</li> <li>Поклейка обоев</li> <li>Роспись стен и потолков</li> <li>Укладка полов</li>
+					 <li>Замена сантехники</li> <li>Замена розеток и выключателей</li> <li>Замена дверей</li>
+			</ul>
+		</div>
+		<strong class="card__pricetag">от 4000 РУБ / m <sup>2</sup></strong>
+	</div>
+</div>
+		</div>
+	</div>
+</section>
+		<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-50">
+				<canvas id="myCanvas" width="760" height="638"></canvas>
+			</div>
+			<div class="col-50">
+				<!-- а вот здесь нужно уже работать как-то с формой обратной связи -->
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		// Generate code GPT
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		// Задаем размеры холста на основе размеров окна браузера
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+
+		var centerX = 50;
+		var centerY = canvas.height / 2;
+		var radius = 318;
+		const textArr = ["Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату", "Бесплатный замер", "Бесплатная консультация", "Получите смету расходов и сроки вашего будущего ремонта"]
+		// Рисуем окружность
+		context.beginPath();
+		context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+		context.strokeStyle = "#E3B873";
+		context.stroke();
+		context.closePath();
+
+		// Располагаем кружки с цифрами
+		var numCircles = 4;
+		var angleStep = Math.PI / numCircles;
+
+		for (var i = 0; i < numCircles; i++) {
+			var angle = (3 * Math.PI / 2) + angleStep * i + 0.35;
+
+			// Вычисляем координаты центра кружка
+			var circleX = centerX + Math.cos(angle) * radius;
+			var circleY = centerY - Math.sin(angle) * radius;
+
+			// Рисуем кружок
+			context.beginPath();
+			context.arc(circleX, circleY, 20, 0, 2 * Math.PI);
+			context.fillStyle = "#E3B873";
+			context.fill();
+			context.closePath();
+
+			// Рисуем цифру внутри кружка
+			context.fillStyle = "white";
+			context.font = "regular 18px Yeseva One";
+			context.textAlign = "center";
+			context.textBaseline = "middle";
+			context.fillText('0' + (i + 1), circleX, circleY);
+
+			// Выводим текст рядом с кружком
+			var text = textArr[i];
+			var textX = circleX + 30;
+			var textY = circleY;
+			context.fillStyle = "#363636";
+			context.font = "medium 18px Futura Book";
+			context.textAlign = "left";
+			context.fillText(text, textX, textY);
+		}
+
+
+	})
+
 </script>
 		<!-- <span>Привет!</span> -->
 		<!-- <img src="assets/img/cover.jpg" alt=""> -->

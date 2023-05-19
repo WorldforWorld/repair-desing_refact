@@ -1,0 +1,32 @@
+<section class="section repair">
+	<div class="container">
+		@@include('../section-title/section-title.html', {"title": "Виды ремонта", "image":
+		"../assets/img/content/repair_types/repair_types.svg", "alt": "repair_types"})
+		<div class="row d-flex">
+			@@include('./repair_card.html', {
+			"image": "../assets/img/content/repair_types/type-1.jpg",
+			"alt": "type-1",
+			"title": "Косметический ремонт",
+			"desc": ["Демонтаж старых покрытий","Поклейка обоев","Роспись стен и потолков","Укладка полов"],
+			"desc2": ["Замена сантехники","Замена розеток и выключателей","Замена дверей"],
+			"price": "900 РУБ"
+			})
+			@@include('./repair_card.html', {
+			"image": "../assets/img/content/repair_types/type-2.jpg",
+			"alt": "type-2",
+			"title": "Капитальный ремонт",
+			"desc": ["Демонтаж старых покрытий","Поклейка обоев","Роспись стен и потолков","Укладка полов"],
+			"desc2": ["Замена сантехники","Замена розеток и выключателей","Замена дверей"],
+			"price": "1800 РУБ"
+			})
+			@@include('./repair_card.html', {
+			"image": "../assets/img/content/repair_types/type-3.jpg",
+			"alt": "type-3",
+			"title": "Дизайнерский ремонт",
+			"desc": ["Демонтаж старых покрытий","Поклейка обоев","Роспись стен и потолков","Укладка полов"],
+			"desc2": ["Замена сантехники","Замена розеток и выключателей","Замена дверей"],
+			"price": "4000 РУБ"
+			})
+		</div>
+	</div>
+</section>

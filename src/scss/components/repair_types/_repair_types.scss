@@ -1,0 +1,61 @@
+.card {
+  &__wrap {
+    padding-bottom: rem(30);
+  }
+  &__image img {
+    width: 100%;
+  }
+  &__section {
+    position: relative;
+    margin-top: rem(-130);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(100% - 60px);
+    padding: 25px 34px 49px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    background-color: $light;
+  }
+  &__title {
+    font-family: 'Yeseva One';
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(25);
+    color: $text;
+    margin-top: 0;
+    margin-bottom: rem(13);
+  }
+  &__desc {
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style-position: inside;
+      font-family: 'Futura Book';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(15);
+      line-height: rem(25);
+      color: $secondary;
+    }
+  }
+  &__pricetag {
+    position: absolute;
+    left: 0;
+    bottom: rem(-29.5);
+    padding: 17px 22px;
+    font-family: 'Yeseva One';
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(25);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $primary;
+    color: $light;
+  }
+}
+.repair {
+  .row {
+    gap: rem(30);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+}

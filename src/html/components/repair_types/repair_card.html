@@ -1,0 +1,15 @@
+<div class="card__wrap">
+	<div class="card__image">
+		<img src="@@image" alt="@@alt">
+	</div>
+	<div class="card__section">
+		<h3 class="card__title">@@title</h3>
+		<div class="card__desc">
+			<ul>
+				@@for (var i = 0; i < desc.length; i++) { <li>`+desc[i]+`</li>}
+					@@for (var i = 0; i < desc2.length; i++) { <li>`+desc2[i]+`</li>}
+			</ul>
+		</div>
+		<strong class="card__pricetag">от @@price / m <sup>2</sup></strong>
+	</div>
+</div>

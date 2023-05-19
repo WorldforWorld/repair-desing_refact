@@ -1,0 +1,36 @@
+.video {
+  display: flex;
+  max-width: rem(816);
+  aspect-ratio: 2/1.13974;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  &__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    width: rem(84);
+    height: rem(84);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width ease-in-out 0.2s, height ease-in-out 0.2s;
+    cursor: pointer;
+    &:hover {
+      width: rem(86);
+      height: rem(86);
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-left: 14px solid $light;
+      transform: translateX(rem(6));
+    }
+  }
+}

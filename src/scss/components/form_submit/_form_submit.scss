@@ -1,0 +1,76 @@
+.form {
+  &__wrap {
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: rem(48);
+      row-gap: rem(37);
+    }
+    .policy {
+      display: flex;
+      justify-content: center;
+      grid-column: 1 / 4;
+      label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: '';
+          position: absolute;
+          left: rem(-30);
+          display: inline-block;
+          width: rem(18);
+          height: rem(18);
+          border: 1px solid $primary;
+          cursor: pointer;
+        }
+        &::after {
+          content: '\2713';
+          position: absolute;
+          display: none;
+          top: 50%;
+          transform: translateY(-140%);
+          left: rem(-25);
+          width: rem(8);
+          height: rem(6);
+          cursor: pointer;
+          color: $light;
+        }
+      }
+      input {
+        width: 0;
+        height: 0;
+        &:checked ~ label {
+          &::before {
+            background-color: $primary;
+          }
+          &::after {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Futura Book';
+    font-weight: 400;
+    label {
+      font-size: rem(15);
+      line-height: rem(20);
+      color: $text;
+      opacity: 0.5;
+    }
+    input {
+      font-size: rem(18);
+      line-height: rem(24);
+      color: $text;
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      border-bottom: 1px solid $text;
+    }
+  }
+}

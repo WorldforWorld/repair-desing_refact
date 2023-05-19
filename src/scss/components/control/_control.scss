@@ -1,35 +1,29 @@
-.control__video {
-  display: flex;
-  max-width: rem(816);
-  aspect-ratio: 2/1;
-  margin: 0 auto;
-  position: relative;
-  .video__play {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $primary;
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width ease-in-out 0.2s, height ease-in-out 0.2s;
-    cursor: pointer;
-    &:hover {
-      width: 86px;
-      height: 86px;
-    }
-    &::before {
+@import './video';
+.control {
+  &__desc {
+    margin: 0 auto;
+    max-width: rem(570);
+    font-family: 'Futura Book';
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: rem(34);
+    text-align: center;
+    color: $text;
+  }
+  &__top__line {
+    &:before {
       content: '';
       display: block;
-      width: 0px;
-      height: 0px;
-      border: 8px solid transparent;
-      border-left: 14px solid $light;
-      transform: translateX(6px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: rem(34);
+      width: rem(54);
+      height: rem(2);
+      background-color: $primary;
     }
+  }
+  &__form {
+    max-width: rem(768);
+    margin: 62px auto 0;
   }
 }

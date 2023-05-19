@@ -20,8 +20,14 @@ body {
     color: $light !important;
   }
 }
+.mt-15 {
+  margin-top: rem(30);
+}
 .mb-17 {
   margin-bottom: rem(34);
+}
+.mb-31 {
+  margin-bottom: rem(62);
 }
 .text {
   &__uppercase {
