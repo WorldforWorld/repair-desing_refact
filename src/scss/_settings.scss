@@ -23,6 +23,9 @@ body {
 .row {
   display: flex;
 }
+.gap-15 {
+  gap: rem(15);
+}
 .space-between {
   justify-content: space-between;
 }

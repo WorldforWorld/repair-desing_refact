@@ -1,4 +1,20 @@
 .furniture {
+  position: relative;
+  &::before {
+    @media (max-width: 890px) {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      z-index: 0;
+      height: 50%;
+      top: auto;
+      bottom: 0;
+      background-color: $black;
+    }
+  }
   &__bg {
     position: relative;
     &::before,
@@ -8,6 +24,9 @@
       width: 100%;
       height: calc(100% - rem(150));
       user-select: none;
+      @media (max-width: 890px) {
+        display: none;
+      }
     }
     &::before {
       content: '';
@@ -27,6 +46,41 @@
     margin-right: 0;
     width: 60%;
     overflow: visible;
+    @media (max-width: 890px) {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      img {
+        width: 100%;
+      }
+      @media (max-width: 890px) {
+        display: block;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        width: rem(36);
+        height: rem(36);
+        border-radius: 50%;
+        background-color: $primary;
+        background-image: url('../img/theme/arrow.svg');
+        background-size: rem(14);
+        transform: rotate(-90deg) translateX(50%);
+        transform-origin: center;
+        box-shadow: 0px 0px 15px rgba($primary, 0.5);
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      .swiper-button-prev {
+        transform: rotate(90deg) translateX(-50%);
+      }
+      .swiper-button-disabled {
+        opacity: 0.7 !important;
+      }
+    }
     .swiper-wrapper {
       overflow: hidden;
     }
@@ -79,7 +133,7 @@
     position: absolute;
     left: -66%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
   }
   &__title {
     margin-bottom: rem(47);

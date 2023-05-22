@@ -23,6 +23,8 @@ export function slider() {
   swiper2.update();
   swiper.controller.control = swiper2;
   swiper2.controller.control = swiper;
+
+  // Furntiture section slider
   const arrNameBullet = [
     'Американская классика',
     'Имперский стиль',
@@ -48,4 +50,53 @@ export function slider() {
     },
   });
   swiperFurniture.update();
+  const swiperFurnitureMobiel = new Swiper('.furniture__slider--mobile', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  swiperFurnitureMobiel.update();
+  // Steps section
+  const stepsLeftSwiper = new Swiper('.steps__left__swiper', {
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  stepsLeftSwiper.update();
+  const arrBulletTittle = [
+    'Выезд на замеры <br>помещения',
+    'Составление <br>сметы',
+    'Разработка дизайн <br>проекта',
+    'Закупка расходных <br>материалов',
+    'Ремонтно-отделочные <br>работы',
+    'Приемка-сдача <br>работ',
+  ];
+  const stepsRightswiper = new Swiper('.steps__right__swiper', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        const classCenter = (index + 1) % 3 === 2;
+        const classRight = (index + 1) % 3 === 0;
+        return `<div class="${className}"><div class="${classCenter ? 'center' : ''} ${
+          classRight ? 'right' : ''
+        }">
+				<span class="steps__right__swiper__count">
+				${index + 1 > 9 ? index + 1 : '0' + (index + 1)}</span>
+				<span class="steps__right__swiper__desc">${arrBulletTittle[index]}</span>
+				</div>
+				</div>`;
+      },
+    },
+  });
+  stepsRightswiper.update();
+  stepsLeftSwiper.controller.control = stepsRightswiper;
+  stepsRightswiper.controller.control = stepsLeftSwiper;
 }

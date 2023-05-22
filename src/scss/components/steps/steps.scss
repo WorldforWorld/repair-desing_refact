@@ -1,0 +1,125 @@
+.steps {
+  color: $light;
+  @media (max-width: 860px) {
+    display: none;
+  }
+  &__block {
+    &__info {
+      font-family: 'Futura Demi';
+      font-weight: 500;
+      font-size: rem(15);
+      line-height: rem(21);
+      text-transform: uppercase;
+    }
+    &__title {
+      font-family: 'Yeseva One';
+      font-weight: 400;
+      font-size: rem(27);
+      line-height: rem(37);
+      text-transform: uppercase;
+      color: $primary;
+      &::after {
+        margin-left: rem(85);
+      }
+    }
+  }
+  &__left {
+    &__swiper {
+      max-width: rem(336);
+      margin-left: 0;
+      font-family: 'Yeseva One';
+      font-weight: 400;
+      font-size: rem(15);
+      line-height: rem(25);
+      &__count {
+        margin-bottom: rem(22);
+        font-size: rem(18);
+        text-transform: uppercase;
+      }
+      &__title {
+        margin-bottom: rem(16);
+        line-height: rem(23);
+        text-transform: uppercase;
+        color: $primary;
+      }
+      &__desc {
+        font-family: 'Futura Book';
+        display: inline-block;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+      .swiper-navigation {
+        margin-top: rem(50);
+      }
+    }
+  }
+  &__right {
+    &__swiper {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: rem(764);
+      img {
+        width: 100%;
+      }
+      .swiper-pagination {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: rem(36);
+        margin-bottom: rem(44);
+        &-bullet {
+          width: auto;
+          height: auto;
+          margin: 0 !important;
+          background-color: transparent;
+          border-radius: 0;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            max-width: rem(135);
+          }
+          .center {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: auto;
+            margin-left: auto;
+          }
+          .right {
+            margin-left: auto;
+          }
+        }
+      }
+      &__count {
+        position: relative;
+        font-family: 'Yeseva One';
+        font-weight: 400;
+        font-size: rem(15);
+        line-height: rem(21);
+        text-transform: uppercase;
+        color: $light;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          display: inline-block;
+          width: 100%;
+          height: 1px;
+          background-color: $primary;
+        }
+      }
+      &__desc {
+        margin-top: rem(15);
+        text-align: left;
+        font-family: 'Futura Book';
+        font-weight: 400;
+        font-size: rem(15);
+        line-height: rem(18);
+        color: $light;
+      }
+    }
+  }
+}
