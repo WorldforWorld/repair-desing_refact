@@ -1,40 +1,83 @@
 <section class="section furniture">
-	<div class="container">
-		<div class="furniture__bg" style="background-image: url('../assets/img/content/furniture/furniture-bg.jpg');">
+	<div class="furniture__bg">
+		<img class="furniture__bg__image" src="../assets/img/content/furniture/furniture-bg.jpg" alt="urniture-bg">
+		<div class="container">
 			<!-- установить транзишион и при смене слайда сделать так чтобы они немного разъезжались вверх и вниз и изчезали, а следующий слайд съезжался и плавно появлялся -->
-			<h2>furniture</h2>
 			<!-- Swiper -->
-			<div class="swiper mySwiper">
+			<div class="swiper furniture__slider">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">Slide 1</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
-					<div class="swiper-slide">Slide 4</div>
-					<div class="swiper-slide">Slide 5</div>
-					<div class="swiper-slide">Slide 6</div>
-					<div class="swiper-slide">Slide 7</div>
-					<div class="swiper-slide">Slide 8</div>
-					<div class="swiper-slide">Slide 9</div>
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-1.jpg",
+					"img2": "../assets/img/content/furniture/furniture-2.jpg",
+					"img3": "../assets/img/content/furniture/furniture-3.jpg",
+					"img4": "../assets/img/content/furniture/furniture-4.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-5.webp",
+					"img2": "../assets/img/content/furniture/furniture-6.jpg",
+					"img3": "../assets/img/content/furniture/furniture-7.jpg",
+					"img4": "../assets/img/content/furniture/furniture-8.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-9.jpg",
+					"img2": "../assets/img/content/furniture/furniture-10.jpg",
+					"img3": "../assets/img/content/furniture/furniture-11.jpg",
+					"img4": "../assets/img/content/furniture/furniture-12.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-13.jpg",
+					"img2": "../assets/img/content/furniture/furniture-14.jpg",
+					"img3": "../assets/img/content/furniture/furniture-15.jpg",
+					"img4": "../assets/img/content/furniture/furniture-16.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-17.jpg",
+					"img2": "../assets/img/content/furniture/furniture-18.jpg",
+					"img3": "../assets/img/content/furniture/furniture-19.jpg",
+					"img4": "../assets/img/content/furniture/furniture-20.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-21.jpg",
+					"img2": "../assets/img/content/furniture/furniture-22.jpg",
+					"img3": "../assets/img/content/furniture/furniture-23.jpg",
+					"img4": "../assets/img/content/furniture/furniture-24.jpg",
+					})@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-5.webp",
+					"img2": "../assets/img/content/furniture/furniture-6.jpg",
+					"img3": "../assets/img/content/furniture/furniture-7.jpg",
+					"img4": "../assets/img/content/furniture/furniture-8.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-9.jpg",
+					"img2": "../assets/img/content/furniture/furniture-10.jpg",
+					"img3": "../assets/img/content/furniture/furniture-11.jpg",
+					"img4": "../assets/img/content/furniture/furniture-12.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-13.jpg",
+					"img2": "../assets/img/content/furniture/furniture-14.jpg",
+					"img3": "../assets/img/content/furniture/furniture-15.jpg",
+					"img4": "../assets/img/content/furniture/furniture-16.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-17.jpg",
+					"img2": "../assets/img/content/furniture/furniture-18.jpg",
+					"img3": "../assets/img/content/furniture/furniture-19.jpg",
+					"img4": "../assets/img/content/furniture/furniture-20.jpg",
+					})
+					@@include('./slide.html', {
+					"img1": "../assets/img/content/furniture/furniture-21.jpg",
+					"img2": "../assets/img/content/furniture/furniture-22.jpg",
+					"img3": "../assets/img/content/furniture/furniture-23.jpg",
+					"img4": "../assets/img/content/furniture/furniture-24.jpg",
+					})
 				</div>
-				<div class="swiper-pagination"></div>
+				<div class="furniture__nav">
+					<h2 class="text__uppercase text-title text__primary furniture__title">Мы реализуем ваши <br>самые смелые
+						фантазии</h2>
+					<div class="swiper-pagination furniture__pagination"></div>
+				</div>
 			</div>
-
-			<!-- Swiper JS -->
-			<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-			<!-- Initialize Swiper -->
-			<script>
-				var swiper = new Swiper(".mySwiper", {
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-						renderBullet: function (index, className) {
-							return '<span class="' + className + '">' + (index + 1) + "</span>";
-						},
-					},
-				});
-			</script>
-			</body>
 		</div>
 	</div>
 </section>
