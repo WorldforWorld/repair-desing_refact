@@ -1,0 +1,89 @@
+.clients {
+  @media (max-width: 767px) {
+    display: none;
+  }
+  .row {
+    gap: rem(54);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  &__subtitle {
+    display: flex;
+    margin: rem(24) auto rem(38);
+    max-width: rem(360);
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: rem(27);
+    text-align: center;
+    color: $text;
+  }
+  &__item {
+    position: relative;
+    background-color: $light;
+    padding: rem(24) rem(19);
+    padding-right: rem(31);
+    padding-bottom: rem(63);
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  }
+  &__preview {
+    display: flex;
+    align-items: center;
+    gap: rem(23);
+    margin-bottom: rem(22);
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 76px;
+      min-height: 76px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    &__name {
+      * {
+        margin: 0;
+        font-family: 'Yeseva One';
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: rem(23);
+        color: $text;
+      }
+    }
+  }
+  &__desc {
+    font-family: 'Futura Book';
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: rem(27);
+    color: $secondary;
+  }
+  &__pricetag {
+    position: absolute;
+    left: 0;
+    bottom: -55px;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    color: $light;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    & > div {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding: rem(11) rem(17);
+      background-color: $primary;
+      strong {
+        font-family: 'Yeseva One';
+        font-weight: 400;
+        font-size: rem(17);
+        line-height: rem(24);
+        text-transform: uppercase;
+        color: $light;
+      }
+    }
+  }
+}
