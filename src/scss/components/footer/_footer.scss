@@ -1,4 +1,12 @@
 footer {
-	background-color: antiquewhite;
-	margin-top: 200px;
+  padding: rem(48) 0;
+  background-color: $dark;
+  @media (max-width: 767px) {
+    display: none;
+  }
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

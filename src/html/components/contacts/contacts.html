@@ -1,0 +1,24 @@
+<section class="section contacts">
+	<div class="container">
+		@@include("../from_submit/from_submit.html", {
+		"selector": "contacts__form",
+		"title":"Остались вопросы?",
+		"text_btn":"Отправить",
+		"formGroup": [{"name":"Имя","idInput":"user-name","type":"text","placeholder":"Как вас зовут:"},
+		{"name":"Телефон","idInput":"user-phone","type":"phone","placeholder":"Ваш номер телефона:"},
+		{"name":"Вопрос","idInput":"user-question","type":"text","placeholder":"Я хочу спросить:"}]})
+		<div class="contacts__address">
+			<span class="contacts__address__text">Ростов на дону, Торговый центр Plaza
+				Прямой телефон <a href="tel:+79997683299">+7 (999) 768 32 99</a></span>
+			<div class="contacts__address__social">
+				<a href="mailto:example@example.example" class="contacts__address__link"><img
+						src="../assets/img/content/contacts/mail.svg" alt="mail"></a>
+				<a href="https://www.instagram.com/instasamka/?hl=ru" class="contacts__address__link"><img
+						src="../assets/img/content/contacts/inst.svg" alt="inst"></a>
+			</div>
+		</div>
+		<div class="contacts__map">
+			<div id="map-yandex"></div>
+		</div>
+	</div>
+</section>

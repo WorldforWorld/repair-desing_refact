@@ -1,6 +1,8 @@
 import * as nav from './modules/nav.js';
 import * as scroll from './modules/scroll-header.js';
+import * as init from './modules/map.js';
 import { slider } from './modules/projects-slider.js';
+
 document.addEventListener('DOMContentLoaded', function () {
   // Скролл для шапки
   scroll.addClassScroll();
@@ -19,4 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
   nav.burgerMenu();
   // Инициализируем слайдер в секции projects
   slider();
+  // Инициализируем карту
+  ymaps.ready(init.init);
 });

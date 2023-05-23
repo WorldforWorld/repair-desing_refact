@@ -1,0 +1,161 @@
+.contacts {
+  position: relative;
+  & > div {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('../img/content/contacts/contacts-bg.jpg') no-repeat center/cover;
+    z-index: -2;
+    @media (max-width: 512px) {
+      background: $dark;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0.9) 3.47%,
+      rgba(24, 24, 24, 0.72) 100%
+    );
+    z-index: -1;
+  }
+  &__form {
+    background-color: $black;
+    max-width: rem(882);
+    margin: 0 auto;
+    .form {
+      &__wrap {
+        max-width: rem(519);
+        padding: rem(34) rem(15);
+        margin: 0 auto;
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: rem(30);
+          row-gap: rem(48);
+          margin-top: rem(45);
+          justify-content: space-between;
+          @media (max-width: 512px) {
+            flex-direction: column;
+          }
+        }
+        button {
+          margin: 0 auto;
+          order: 1;
+          @media (max-width: 512px) {
+            width: 100%;
+          }
+        }
+        .policy {
+          width: 100%;
+          label {
+            color: $light;
+          }
+        }
+      }
+      &__title {
+        display: flex;
+        justify-content: center;
+        font-family: 'Yeseva One';
+        font-weight: 400;
+        font-size: rem(20);
+        line-height: rem(28);
+        text-transform: uppercase;
+        color: $light;
+      }
+      &__group {
+        &:nth-of-type(2),
+        &:first-child {
+          width: calc(50% - rem(29));
+          @media (max-width: 512px) {
+            width: 100%;
+          }
+        }
+        &:nth-of-type(3) {
+          width: 100%;
+        }
+        input,
+        input::placeholder,
+        label {
+          color: $light;
+        }
+      }
+    }
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(52);
+    margin-bottom: rem(97);
+    @media (max-width: 767px) {
+      margin-top: ewm(41);
+      margin-bottom: 0;
+      order: 1;
+    }
+    &__text a,
+    &__text {
+      font-family: 'Yeseva One';
+      font-weight: 400;
+      font-size: rem(20);
+      line-height: rem(28);
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $primary;
+    }
+    &__text {
+      max-width: rem(538);
+      a {
+        transition: color ease-in-out 0.3s, text-decoration ease-in-out 0.3s;
+        &:hover {
+          color: $light;
+          text-decoration: underline;
+        }
+      }
+    }
+    &__social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(15);
+      margin-top: rem(26);
+    }
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(28);
+      height: rem(28);
+      background-color: $primary;
+      border-radius: 50%;
+      &:hover {
+        box-shadow: 0px 5px 15px rgba($primary, 0.2);
+      }
+    }
+  }
+  &__map {
+    @media (max-width: 767px) {
+      margin-top: rem(46);
+    }
+    & > div {
+      margin: 0 auto;
+      height: rem(465);
+      width: 100%;
+      max-width: rem(923);
+    }
+  }
+}
