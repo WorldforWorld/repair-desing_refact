@@ -1,0 +1,38 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to dist folder
+        run: |
+          mkdir dist
+          cp -R ./dist/* dist/
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'Your Name'
+          git config --global user.email 'youremail@example.com'
+          git add .
+          git commit -m "Auto-generated build artifacts"
+          git push
