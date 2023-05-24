@@ -1,3 +1,7 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const packageFile = require('../../package.json');
+
 import favicons from 'gulp-favicons';
 import filter from 'gulp-filter';
 const config = {
@@ -28,9 +32,9 @@ export const favicon = () => {
     .pipe(
       favicons({
         // Здесь импортировать из файла package.json
-        appName: `Template name`,
-        appShortName: `Template short-name`,
-        appDescription: `Template desc`,
+        appName: packageFile.name,
+        appShortName: packageFile.shortName,
+        appDescription: packageFile.description,
         icons: config.icons,
         path: config.path,
       })

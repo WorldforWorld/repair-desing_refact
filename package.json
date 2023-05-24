@@ -2,6 +2,7 @@
   "name": "control_test",
   "version": "1.0.0",
   "description": "",
+  "shortName": "",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -9,7 +10,8 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprive": "gulp svgSprive"
+    "svgSprive": "gulp svgSprive",
+    "favicon": "gulp favicon"
   },
   "repository": {
     "type": "git",
