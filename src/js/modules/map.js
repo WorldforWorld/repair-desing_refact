@@ -13,7 +13,7 @@ export function init() {
     },
     {
       iconLayout: 'default#image',
-      iconImageHref: '../assets/img/theme/marker.png',
+      iconImageHref: 'assets/img/theme/marker.png',
       iconImageSize: [32, 32],
       iconImageOffset: [-5, -38],
     }
