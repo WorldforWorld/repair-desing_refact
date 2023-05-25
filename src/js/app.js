@@ -2,7 +2,8 @@ import * as nav from './modules/nav.js';
 import * as scroll from './modules/scroll-header.js';
 import * as init from './modules/map.js';
 import { slider } from './modules/projects-slider.js';
-
+import { isWebp } from './modules/functions.js';
+isWebp();
 document.addEventListener('DOMContentLoaded', function () {
   // Скролл для шапки
   scroll.addClassScroll();
