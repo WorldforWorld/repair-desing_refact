@@ -15,13 +15,15 @@ export const html = () => {
           })
         )
       )
-      .pipe(fileinclude()) // Не нужен при работе с расширением файлов PUG
-      /*     .pipe(pug({
-      // Сжатие HTML файла
-      pretty: true,
-      // Показывать в терминале какой файл обработан
-      verbose: true
-    })) */
+      .pipe(fileinclude()) // fileinclude не нужен при работе с расширением файлов PUG
+      /*
+      .pipe(pug({
+        // Сжатие HTML файла
+        pretty: true,
+        // Показывать в терминале какой файл обработан
+        verbose: true
+      }))
+      */
       .pipe(app.plugins.replace(/@img\//g, 'assets/img/'))
       .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
       .pipe(
@@ -34,9 +36,11 @@ export const html = () => {
               cover: 0,
               to: ['css', 'js'],
             },
-            // output: {
-            //   file: 'gulp/version.json',
-            // },
+            /*
+            output: {
+              file: 'gulp/version.json',
+            },
+            */
           })
         )
       )

@@ -12,7 +12,6 @@ global.app = {
   path: path,
   gulp: gulp,
   plugins: plugins,
-  // favicon: favicon,
 };
 
 // Импорт задач
@@ -37,9 +36,9 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
-  // gulp.watch(path.watch.favicon, favicon);
 }
 
+// Отдельные сценарии
 export { svgSprive };
 export { favicon };
 
