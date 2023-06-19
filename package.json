@@ -1,5 +1,5 @@
 {
-  "name": "control_test",
+  "name": "repair-desing_refact",
   "version": "1.0.0",
   "description": "",
   "shortName": "",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WorldforWorld/control_test.git"
+    "url": "git+https://github.com/WorldforWorld/repair-desing_refact.git"
   },
   "author": "Yuri",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WorldforWorld/control_test/issues"
+    "url": "https://github.com/WorldforWorld/repair-desing_refact/issues"
   },
-  "homepage": "https://github.com/WorldforWorld/control_test#readme",
+  "homepage": "https://github.com/WorldforWorld/repair-desing_refact#readme",
   "dependencies": {
     "swiper": "latest"
   },

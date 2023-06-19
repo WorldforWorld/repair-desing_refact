@@ -13,7 +13,7 @@ export function hideItemMenu() {
 
   // Скрываем элементы
   let widthItem = 0;
-  const navItem = document.querySelectorAll('.main__menu>ul > .nav__item');
+  const navItem = document.querySelectorAll('.main__menu > ul > .nav__item');
   const ddNavItem = document.querySelectorAll('.dd_menu .nav__item');
   const navItemOpen = document.querySelectorAll('.main__menu>ul>.nav__item.open');
   if (navItemOpen.length == navItem.length) {

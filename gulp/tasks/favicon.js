@@ -4,6 +4,7 @@ const packageFile = require('../../package.json');
 
 import favicons from 'gulp-favicons';
 import filter from 'gulp-filter';
+// Возможно вынести конфиг в файл package.json
 const config = {
   icons: {
     favicons: true,
