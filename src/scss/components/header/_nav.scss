@@ -45,6 +45,15 @@
         overflow: visible;
         width: auto;
       }
+      &.submenu.open-bottom > ul {
+        left: 0 !important;
+        top: 26px !important;
+      }
+      &.submenu.open-top > ul {
+        left: 0 !important;
+        bottom: 26px !important;
+        top: auto !important;
+      }
     }
   }
   ul {
@@ -54,7 +63,7 @@
       & > span,
       & > a {
         &::after {
-          content: '›';
+          content: "›";
           margin-left: rem(10);
           font-size: rem(24);
           transform: rotate(90deg);
@@ -77,6 +86,17 @@
         & > ul {
           right: 100%;
           left: auto;
+        }
+      }
+      &.open-bottom {
+        & > ul {
+          top: -15px;
+        }
+      }
+      &.open-top {
+        & > ul {
+          bottom: -15px;
+          top: auto;
         }
       }
       & > ul {
