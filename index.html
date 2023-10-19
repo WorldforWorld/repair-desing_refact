@@ -6,18 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap&_v=20230619072854" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap&_v=20231019125831" rel="stylesheet">
   <link rel="icon" href="assets/img/favicon/favicon.svg">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="assets/css/style.min.css?_v=20230619072854">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=a0935634-5e5a-4ebb-94cb-26085c4739f8&lang=ru_RU&_v=20230619072854"
+  <link rel="stylesheet" href="assets/css/style.min.css?_v=20231019125831">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a0935634-5e5a-4ebb-94cb-26085c4739f8&lang=ru_RU&_v=20231019125831"
     type="text/javascript">
     </script>
   <title>Главная</title>
 </head>
 
 <body>
+	<div id="upbutton"></div>
 	<header>
 	<div class="container">
 		<div class="menu" id="menu">
@@ -43,6 +44,10 @@
 								<li><a href="#">Item 533</a></li>
 								<li><a href="#">Item 534</a></li>
 								<li><a href="#">Item 535</a></li>
+								<li><a href="#">Item 536</a></li>
+								<li><a href="#">Item 537</a></li>
+								<li><a href="#">Item 538</a></li>
+								<li><a href="#">Item 539</a></li>
 							</ul>
 						</li>
 						<li><a href="#">Item 54</a></li>
@@ -353,8 +358,8 @@
 		<div class="video mt-15 mb-31" id="player-RHzzLqJWqHs"
 	style="background: url('https://i.ytimg.com/vi/RHzzLqJWqHs/maxresdefault.jpg') no-repeat center / cover;">
 	<script type="text/javascript" id="www-widgetapi-script"
-		src="https://www.youtube.com/s/player/90a441fd/www-widgetapi.vflset/www-widgetapi.js?_v=20230619072854" async=""></script>
-	<script src="https://www.youtube.com/iframe_api?_v=20230619072854"></script>
+		src="https://www.youtube.com/s/player/90a441fd/www-widgetapi.vflset/www-widgetapi.js?_v=20231019125831" async=""></script>
+	<script src="https://www.youtube.com/iframe_api?_v=20231019125831"></script>
 	<div class="video__play" id="RHzzLqJWqHs"></div>
 </div>
 
@@ -385,6 +390,7 @@
 		<div class="control__form">
 	<div class=" form__wrap">
 		
+		
 		<form action="#">
 			 <div class="form__group">
 				<label for="user-name">Имя</label>
@@ -397,8 +403,8 @@
 	
 	<button class="button button--primary">Отправить</button>
 	<div class="policy">
-		<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
-		<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+		<input type="checkbox" name="policyCheckbox" id="control__form__policy-checkbox" class="policy__checkbox" checked="">
+		<label for="control__form__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
 	</div>
 	</form>
 </div>
@@ -486,6 +492,7 @@
 		
 		<span class="form__title">Оставьте заявку на бесплатный <br>выезд замерщика</span>
 		
+		
 		<form action="#">
 			 <div class="form__group">
 				<label for="user-name">Имя</label>
@@ -502,8 +509,8 @@
 	
 	<button class="button button--primary">Вызвать замерщика</button>
 	<div class="policy">
-		<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
-		<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+		<input type="checkbox" name="policyCheckbox" id="offer__form__policy-checkbox" class="policy__checkbox" checked="">
+		<label for="offer__form__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
 	</div>
 	</form>
 </div>
@@ -1051,6 +1058,7 @@
 		
 		<span class="form__title">Остались вопросы?</span>
 		
+		
 		<form action="#">
 			 <div class="form__group">
 				<label for="user-name">Имя</label>
@@ -1067,8 +1075,8 @@
 	
 	<button class="button button--primary">Отправить</button>
 	<div class="policy">
-		<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
-		<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+		<input type="checkbox" name="policyCheckbox" id="contacts__form__policy-checkbox" class="policy__checkbox" checked="">
+		<label for="contacts__form__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
 	</div>
 	</form>
 </div>
@@ -1089,6 +1097,44 @@
 	</div>
 </section>
 	</main>
+	<div class="popup__success">
+  <span>Спасибо что отправили заявку!</span>
+  <span>Скоро с вами свяжется наш специалист.</span>
+  <span>But that's not certain 😥</span>
+</div>
+	<div class="popup__call">
+
+  <div class="popup__call__form">
+	<div class=" form__wrap">
+		
+		<span class="form__title">Оставьте заявку и наш менеджер свяжется с вами</span>
+		
+		
+		<button class="form__close"></button>
+		
+		<form action="#">
+			 <div class="form__group">
+				<label for="user-name">Имя</label>
+				<input type="text" id="user-name" placeholder="Как вас зовут:">
+	</div>
+	 <div class="form__group">
+				<label for="user-phone">Телефон</label>
+				<input type="text" id="user-phone" placeholder="Ваш номер телефона:">
+	</div>
+	 <div class="form__group">
+				<label for="user-email">Email</label>
+				<input type="email" id="user-email" placeholder="Ваш email:">
+	</div>
+	
+	<button class="button button--primary">Отправить заявку</button>
+	<div class="policy">
+		<input type="checkbox" name="policyCheckbox" id="popup__call__form__policy-checkbox" class="policy__checkbox" checked="">
+		<label for="popup__call__form__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+	</div>
+	</form>
+</div>
+</div>
+</div>
 	<footer>
 	<div class="container">
 		<div class="logo">
@@ -1113,6 +1159,10 @@
 								<li><a href="#">Item 533</a></li>
 								<li><a href="#">Item 534</a></li>
 								<li><a href="#">Item 535</a></li>
+								<li><a href="#">Item 536</a></li>
+								<li><a href="#">Item 537</a></li>
+								<li><a href="#">Item 538</a></li>
+								<li><a href="#">Item 539</a></li>
 							</ul>
 						</li>
 						<li><a href="#">Item 54</a></li>
@@ -1246,7 +1296,7 @@
 		</div>
 	</div>
 </footer>
-	<script src="assets/js/app.min.js?_v=20230619072854"></script>
+	<script src="assets/js/app.min.js?_v=20231019125831"></script>
 </body>
 
 </html>
