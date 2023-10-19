@@ -5,6 +5,7 @@
 })
 
 <body>
+	<div id="upbutton"></div>
 	@@include('html/components/header/header.html', {})
 	<main>
 		@@include('html/components/main/main.html', {})
@@ -20,6 +21,8 @@
 		@@include('html/components/clients/clients.html', {})
 		@@include('html/components/contacts/contacts.html', {})
 	</main>
+	@@include('html/components/popup_success/popup_success.html', {})
+	@@include('html/components/popup_call/popup_call.html', {})
 	@@include('html/footer.html', {})
 	<script src="assets/js/app.min.js"></script>
 </body>
