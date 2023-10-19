@@ -3,6 +3,9 @@
 		@@if (title !== 'null') {
 		<span class="form__title">@@title</span>
 		}
+		@@if (close) {
+		<button class="form__close"></button>
+		}
 		<form action="#">
 			@@for (var i = 0; i < formGroup.length; i++) { <div class="form__group">
 				<label for="`+formGroup[i].idInput+`">`+formGroup[i].name+`</label>
@@ -11,8 +14,8 @@
 	}
 	<button class="button button--primary">@@text_btn</button>
 	<div class="policy">
-		<input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="">
-		<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+		<input type="checkbox" name="policyCheckbox" id="@@selector__policy-checkbox" class="policy__checkbox" checked="">
+		<label for="@@selector__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
 	</div>
 	</form>
 </div>
