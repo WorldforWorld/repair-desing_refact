@@ -1,4 +1,4 @@
-import webpack from 'webpack-stream';
+import webpack from "webpack-stream";
 
 export const js = () => {
   return app.gulp
@@ -6,19 +6,23 @@ export const js = () => {
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
-          title: 'JS',
-          message: 'Error <%= error.message %>',
+          title: "JS",
+          message: "Error <%= error.message %>",
         })
       )
     )
     .pipe(
       webpack({
-        mode: app.isBuild ? 'production' : 'development',
+        mode: app.isBuild ? "production" : "development",
         output: {
-          filename: 'app.min.js',
+          filename: "app.min.js",
         },
       })
     )
+    .pipe(
+      app.plugins.if(app.isBuild, app.plugins.replace(/@img\//g, "../img/"))
+    )
+    .pipe(app.plugins.replace(/@img\//g, "assets/img/"))
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(app.plugins.browsersync.stream());
 };
