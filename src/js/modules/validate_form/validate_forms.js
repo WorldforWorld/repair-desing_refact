@@ -26,6 +26,7 @@ export function validateForms(params) {
     } else {
       froms.reset();
       popupSuccess();
+      document.querySelector(".popup__call").classList.remove("open");
       console.log("Форма отправлена");
     }
     countErrors = 0;
