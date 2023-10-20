@@ -161,12 +161,13 @@
   &__map {
     position: relative;
     background: url("../img/theme/yandex-before-load-marker.png") #ffffff
-      no-repeat;
+      no-repeat center/cover;
     overflow: hidden;
     max-width: rem(923);
     margin: 0 auto;
     @media (max-width: 767px) {
       margin-top: rem(46);
+      width: 100%;
     }
     #map-yandex {
       margin: 0 auto;
