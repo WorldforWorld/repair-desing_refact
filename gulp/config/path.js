@@ -1,5 +1,5 @@
 // Получаем имя папки проекта
-import * as nodePath from 'path';
+import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 const buildFolder = `./dist`;
@@ -13,7 +13,8 @@ export const path = {
     images: `${buildFolder}/assets/img/`,
     fonts: `${buildFolder}/assets/fonts/`,
     files: `${buildFolder}/assets/files/`,
-    favicon: `${buildFolder}/assets/img/favicon/`
+    library: `${buildFolder}/assets/library/`,
+    favicon: `${buildFolder}/assets/img/favicon/`,
   },
   src: {
     js: `${srcFolder}/js/app.js`,
@@ -22,6 +23,7 @@ export const path = {
     scss: `${srcFolder}/scss/style.scss`,
     html: `${srcFolder}/*.html`, // .pug
     files: `${srcFolder}/files/**/*.*`,
+    library: `${srcFolder}/library/**/*.*`,
     svgicons: `${srcFolder}/svgicons/*.svg`,
     favicon: `${srcFolder}/img/favicon/favicon.svg`,
   },
@@ -31,11 +33,12 @@ export const path = {
     html: `${srcFolder}/**/*.html`, //.pub
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     files: `${srcFolder}/files/**/*.*`,
+    library: `${srcFolder}/library/**/*.*`,
     favicon: `${srcFolder}/img/favicon/favicon.svg`,
   },
   clean: buildFolder,
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,
-  ftp: `test` // Название папки на удалённом сервере
-}
+  ftp: `test`, // Название папки на удалённом сервере
+};
