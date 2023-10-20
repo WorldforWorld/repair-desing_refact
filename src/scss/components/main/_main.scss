@@ -6,12 +6,16 @@
   justify-content: center;
   align-items: flex-start;
   padding-top: rem(100);
-  background: $dark url('../img/content/main/hero-bg.jpg') no-repeat center / cover;
+  background: $dark url("../img/content/main/hero-bg.jpg") no-repeat center /
+    cover;
   height: 100vh;
-  min-height: rem(464);
+  min-height: rem(550);
   color: $light;
+  @media (max-width: 767px) {
+    height: auto;
+  }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -20,7 +24,7 @@
     background-color: rgba($dark, 0.7);
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -85,7 +89,7 @@
   /** листайте вниз **/
   &__scroll-down {
     z-index: 3;
-    font-family: 'Yeseva One', cursive;
+    font-family: "Yeseva One", cursive;
     font-size: 0.857rem;
     position: absolute;
     display: flex;
@@ -109,8 +113,8 @@
       display: none;
     }
     &::after {
-      content: '';
-      background: url('../img/theme/arrow-down.svg') no-repeat center;
+      content: "";
+      background: url("../img/theme/arrow-down.svg") no-repeat center;
       width: 30px;
       height: 30px;
       border: 2px solid $primary;
@@ -141,7 +145,7 @@
     line-height: 0.8;
     font-size: 1.1rem;
     &::after {
-      content: '';
+      content: "";
       width: 50px;
       height: 1px;
       background-color: $primary;
@@ -151,7 +155,7 @@
 }
 .title {
   margin: 0;
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   text-transform: uppercase;
   font-size: rem(40);
   font-weight: normal;
