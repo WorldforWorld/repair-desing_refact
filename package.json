@@ -1,8 +1,8 @@
 {
   "name": "repair-desing_refact",
   "version": "1.0.0",
-  "description": "",
-  "shortName": "",
+  "description": "Repair Desing Project",
+  "shortName": "Repair Desing Project",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
