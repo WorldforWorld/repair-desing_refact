@@ -6704,7 +6704,7 @@ header .menu {
 }
 
 .no-webp .contacts__map{
-  background: url("../img/theme/yandex-before-load-marker.png") #ffffff no-repeat; }
+  background: url("../img/theme/yandex-before-load-marker.png") #ffffff no-repeat center/cover; }
 
 .contacts__map {
   position: relative;
@@ -7220,6 +7220,7 @@ footer > div {
 
   .contacts__map {
     margin-top: 2.875rem;
+    width: 100%;
   }
 
   footer {
@@ -7367,4 +7368,4 @@ footer > div {
 
 .webp .contacts::before{ background: url(../img/content/contacts/contacts-bg.webp) no-repeat center/cover; }
 
-.webp .contacts__map{ background: url(../img/theme/yandex-before-load-marker.webp) #ffffff no-repeat; }
+.webp .contacts__map{ background: url(../img/theme/yandex-before-load-marker.webp) #ffffff no-repeat center/cover; }
