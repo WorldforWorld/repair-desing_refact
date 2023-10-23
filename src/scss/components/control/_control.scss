@@ -1,4 +1,24 @@
 @import "./video";
+#control {
+  position: relative;
+  h2 {
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 38%;
+    background: $dark;
+  }
+  @media (max-width: 767px) {
+    background: $black;
+    color: $light;
+  }
+}
 .control {
   &__desc {
     margin: 0 auto;
@@ -9,6 +29,9 @@
     line-height: rem(34);
     text-align: center;
     color: $text;
+    @media (max-width: 767px) {
+      color: $light;
+    }
   }
   &__top__line {
     &:before {
@@ -39,6 +62,12 @@
         @media (max-width: 440px) {
           max-width: 100%;
         }
+        @media (max-width: 767px) {
+          label,
+          input::placeholder {
+            color: $light;
+          }
+        }
         &.error {
           label,
           input::placeholder,
@@ -52,6 +81,9 @@
       }
       .button {
         max-width: rem(199);
+        @media (max-width: 767px) {
+          order: 1;
+        }
         @media (max-width: 440px) {
           max-width: 100%;
         }
