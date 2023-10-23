@@ -7,7 +7,7 @@
 		<button class="form__close"></button>
 		}
 		<form action="#">
-			@@for (var i = 0; i < fg.length; i++) { <div class="form__fg">
+			@@for (var i = 0; i < fg.length; i++) { <div class="form__group">
 				<label for="`+fg[i].id+`">`+fg[i].name+`</label>
 				<input type="`+fg[i].type+`" id="`+fg[i].id+`" class="`+fg[i].class+`" placeholder="`+fg[i].placeholder+`">
 	</div>
