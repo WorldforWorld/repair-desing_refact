@@ -5384,6 +5384,7 @@ header .menu {
 
 #control h2 {
   z-index: 1;
+  color: #ffffff;
 }
 
 #control:before {

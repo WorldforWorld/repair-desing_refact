@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap&_v=20231023101022" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap&_v=20231023110138" rel="stylesheet">
   <link rel="icon" href="assets/img/favicon/favicon.svg">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="assets/css/style.min.css?_v=20231023101022">
-  </script>
+  <link rel="stylesheet" href="assets/css/style.min.css?_v=20231023110138">
   <title>Главная</title>
 </head>
 
@@ -354,9 +353,9 @@
 </div>
 		<div class="video mt-15 mb-31" id="player-RHzzLqJWqHs"
 	style="background: url('https://i.ytimg.com/vi/RHzzLqJWqHs/maxresdefault.jpg') no-repeat center / cover;">
-	<script type="text/javascript" id="www-widgetapi-script"
-		src="https://www.youtube.com/s/player/90a441fd/www-widgetapi.vflset/www-widgetapi.js?_v=20231023101022" async=""></script>
-	<script src="https://www.youtube.com/iframe_api?_v=20231023101022"></script>
+	<script id="www-widgetapi-script"
+		src="https://www.youtube.com/s/player/90a441fd/www-widgetapi.vflset/www-widgetapi.js?_v=20231023110138" async=""></script>
+	<script src="https://www.youtube.com/iframe_api?_v=20231023110138"></script>
 	<div class="video__play" id="RHzzLqJWqHs"></div>
 </div>
 
@@ -390,12 +389,14 @@
 		
 		<form action="#">
 			 <div class="form__group">
-				<label for="user-name">Имя</label>
-				<input type="text" id="user-name" placeholder="Как вас зовут:">
+				<label for="user-name2">Имя</label>
+				<input type="text" id="user-name2" class="user-name"
+					placeholder="Как вас зовут:">
 	</div>
 	 <div class="form__group">
-				<label for="user-phone">Телефон</label>
-				<input type="text" id="user-phone" placeholder="Ваш номер телефона:">
+				<label for="user-phone3">Телефон</label>
+				<input type="text" id="user-phone3" class="user-phone"
+					placeholder="Ваш номер телефона:">
 	</div>
 	
 	<button class="button button--primary">Отправить</button>
@@ -492,16 +493,19 @@
 		
 		<form action="#">
 			 <div class="form__group">
-				<label for="user-name">Имя</label>
-				<input type="text" id="user-name" placeholder="Как вас зовут:">
+				<label for="user-name3">Имя</label>
+				<input type="text" id="user-name3" class="user-name"
+					placeholder="Как вас зовут:">
 	</div>
 	 <div class="form__group">
-				<label for="user-phone">Телефон</label>
-				<input type="text" id="user-phone" placeholder="Ваш телефон:">
+				<label for="user-phone3">Телефон</label>
+				<input type="text" id="user-phone3" class="user-phone"
+					placeholder="Ваш телефон:">
 	</div>
 	 <div class="form__group">
 				<label for="user-mail">Имя</label>
-				<input type="email" id="user-mail" placeholder="Ваш email:">
+				<input type="email" id="user-mail" class="user-mail"
+					placeholder="Ваш email:">
 	</div>
 	
 	<button class="button button--primary">Вызвать замерщика</button>
@@ -691,9 +695,9 @@
 			</div>
 			<div class="swiper furniture__slider--mobile">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><picture><source srcset="assets/img/content/furniture/furniture-bg.webp" type="image/webp"><img src="assets/img/content/furniture/furniture-bg.jpg"></picture></div>
-					<div class="swiper-slide"><picture><source srcset="assets/img/content/furniture/furniture-bg.webp" type="image/webp"><img src="assets/img/content/furniture/furniture-bg.jpg"></picture></div>
-					<div class="swiper-slide"><picture><source srcset="assets/img/content/furniture/furniture-bg.webp" type="image/webp"><img src="assets/img/content/furniture/furniture-bg.jpg"></picture></div>
+					<div class="swiper-slide"><picture><source srcset="assets/img/content/furniture/furniture-bg.webp" type="image/webp"><img src="assets/img/content/furniture/furniture-bg.jpg" alt="furniture-bg"></picture></div>
+					<div class="swiper-slide"><picture><source srcset="assets/img/content/furniture/furniture-bg.webp" type="image/webp"><img src="assets/img/content/furniture/furniture-bg.jpg" alt="furniture-bg"></picture></div>
+					<div class="swiper-slide"><picture><source srcset="assets/img/content/furniture/furniture-bg.webp" type="image/webp"><img src="assets/img/content/furniture/furniture-bg.jpg" alt="furniture-bg"></picture></div>
 				</div>
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
@@ -789,88 +793,88 @@
 				<div class="swiper steps__left__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-	<san class="steps__left__swiper__count">1/6</san>
-	<h3 class="steps__left__swiper__title">Выезд на замеры <br>помещения</h3>
-	<span class="steps__left__swiper__desc">
-		После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
-		время нашей
-		встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
-	</span>
-	<span class="steps__left__swiper__desc">
-		Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
-		квартиры, сроков
-		ремонта квартиры в целом и отдельных ее этапов.
-	</span>
+	<span class="steps__left__swiper__count">1/6</>
+		<h3 class="steps__left__swiper__title">Выезд на замеры <br>помещения</h3>
+		<span class="steps__left__swiper__desc">
+			После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
+			время нашей
+			встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
+		</span>
+		<span class="steps__left__swiper__desc">
+			Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
+			квартиры, сроков
+			ремонта квартиры в целом и отдельных ее этапов.
+		</span>
 </div>
 						<div class="swiper-slide">
-	<san class="steps__left__swiper__count">2/6</san>
-	<h3 class="steps__left__swiper__title">Составление <br>сметы</h3>
-	<span class="steps__left__swiper__desc">
-		После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
-		время нашей
-		встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
-	</span>
-	<span class="steps__left__swiper__desc">
-		Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
-		квартиры, сроков
-		ремонта квартиры в целом и отдельных ее этапов.
-	</span>
+	<span class="steps__left__swiper__count">2/6</>
+		<h3 class="steps__left__swiper__title">Составление <br>сметы</h3>
+		<span class="steps__left__swiper__desc">
+			После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
+			время нашей
+			встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
+		</span>
+		<span class="steps__left__swiper__desc">
+			Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
+			квартиры, сроков
+			ремонта квартиры в целом и отдельных ее этапов.
+		</span>
 </div>
 						<div class="swiper-slide">
-	<san class="steps__left__swiper__count">3/6</san>
-	<h3 class="steps__left__swiper__title">Разработка дизайн <br>проекта</h3>
-	<span class="steps__left__swiper__desc">
-		После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
-		время нашей
-		встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
-	</span>
-	<span class="steps__left__swiper__desc">
-		Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
-		квартиры, сроков
-		ремонта квартиры в целом и отдельных ее этапов.
-	</span>
+	<span class="steps__left__swiper__count">3/6</>
+		<h3 class="steps__left__swiper__title">Разработка дизайн <br>проекта</h3>
+		<span class="steps__left__swiper__desc">
+			После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
+			время нашей
+			встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
+		</span>
+		<span class="steps__left__swiper__desc">
+			Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
+			квартиры, сроков
+			ремонта квартиры в целом и отдельных ее этапов.
+		</span>
 </div>
 						<div class="swiper-slide">
-	<san class="steps__left__swiper__count">4/6</san>
-	<h3 class="steps__left__swiper__title">Закупка расходных <br>материалов</h3>
-	<span class="steps__left__swiper__desc">
-		После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
-		время нашей
-		встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
-	</span>
-	<span class="steps__left__swiper__desc">
-		Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
-		квартиры, сроков
-		ремонта квартиры в целом и отдельных ее этапов.
-	</span>
+	<span class="steps__left__swiper__count">4/6</>
+		<h3 class="steps__left__swiper__title">Закупка расходных <br>материалов</h3>
+		<span class="steps__left__swiper__desc">
+			После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
+			время нашей
+			встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
+		</span>
+		<span class="steps__left__swiper__desc">
+			Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
+			квартиры, сроков
+			ремонта квартиры в целом и отдельных ее этапов.
+		</span>
 </div>
 						<div class="swiper-slide">
-	<san class="steps__left__swiper__count">5/6</san>
-	<h3 class="steps__left__swiper__title">Ремонтно-отделочные <br>работы</h3>
-	<span class="steps__left__swiper__desc">
-		После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
-		время нашей
-		встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
-	</span>
-	<span class="steps__left__swiper__desc">
-		Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
-		квартиры, сроков
-		ремонта квартиры в целом и отдельных ее этапов.
-	</span>
+	<span class="steps__left__swiper__count">5/6</>
+		<h3 class="steps__left__swiper__title">Ремонтно-отделочные <br>работы</h3>
+		<span class="steps__left__swiper__desc">
+			После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
+			время нашей
+			встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
+		</span>
+		<span class="steps__left__swiper__desc">
+			Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
+			квартиры, сроков
+			ремонта квартиры в целом и отдельных ее этапов.
+		</span>
 </div>
 						<div class="swiper-slide">
-	<san class="steps__left__swiper__count">6/6</san>
-	<h3 class="steps__left__swiper__title">Приемка-сдача <br>работ</h3>
-	<span class="steps__left__swiper__desc">
-		После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
-		время нашей
-		встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
-	</span>
-	<span class="steps__left__swiper__desc">
-		Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
-		квартиры, сроков
-		ремонта квартиры в целом и отдельных ее этапов.
-	</span>
+	<span class="steps__left__swiper__count">6/6</>
+		<h3 class="steps__left__swiper__title">Приемка-сдача <br>работ</h3>
+		<span class="steps__left__swiper__desc">
+			После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во
+			время нашей
+			встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
+		</span>
+		<span class="steps__left__swiper__desc">
+			Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна
+			квартиры, сроков
+			ремонта квартиры в целом и отдельных ее этапов.
+		</span>
 </div>
 					</div>
 					<div class="swiper-navigation">
@@ -1061,16 +1065,19 @@
 		
 		<form action="#">
 			 <div class="form__group">
-				<label for="user-name">Имя</label>
-				<input type="text" id="user-name" placeholder="Как вас зовут:">
+				<label for="user-name1">Имя</label>
+				<input type="text" id="user-name1" class="user-name"
+					placeholder="Как вас зовут:">
 	</div>
 	 <div class="form__group">
-				<label for="user-phone">Телефон</label>
-				<input type="phone" id="user-phone" placeholder="Ваш номер телефона:">
+				<label for="user-phone1">Телефон</label>
+				<input type="phone" id="user-phone1" class="user-phone"
+					placeholder="Ваш номер телефона:">
 	</div>
 	 <div class="form__group">
 				<label for="user-question">Вопрос</label>
-				<input type="text" id="user-question" placeholder="Я хочу спросить:">
+				<input type="text" id="user-question" class="user-question"
+					placeholder="Я хочу спросить:">
 	</div>
 	
 	<button class="button button--primary">Отправить</button>
@@ -1104,8 +1111,7 @@
   <span>But that's not certain 😈</span>
 </div>
 	<div class="popup__call">
-
-  <div class="popup__call__form">
+	<div class="popup__call__form">
 	<div class=" form__wrap">
 		
 		<span class="form__title">Оставьте заявку и наш менеджер свяжется с вами</span>
@@ -1116,15 +1122,18 @@
 		<form action="#">
 			 <div class="form__group">
 				<label for="user-name">Имя</label>
-				<input type="text" id="user-name" placeholder="Как вас зовут:">
+				<input type="text" id="user-name" class="user-name"
+					placeholder="Как вас зовут:">
 	</div>
 	 <div class="form__group">
 				<label for="user-phone">Телефон</label>
-				<input type="text" id="user-phone" placeholder="Ваш номер телефона:">
+				<input type="text" id="user-phone" class="user-phone"
+					placeholder="Ваш номер телефона:">
 	</div>
 	 <div class="form__group">
 				<label for="user-email">Email</label>
-				<input type="email" id="user-email" placeholder="Ваш email:">
+				<input type="email" id="user-email" class="user-email"
+					placeholder="Ваш email:">
 	</div>
 	
 	<button class="button button--primary">Отправить заявку</button>
@@ -1296,8 +1305,8 @@
 		</div>
 	</div>
 </footer>
-	<script src="assets/library/wow.min.js?_v=20231023101022"></script>
-	<script src="assets/js/app.min.js?_v=20231023101022"></script>
+	<script src="assets/library/wow.min.js?_v=20231023110138"></script>
+	<script src="assets/js/app.min.js?_v=20231023110138"></script>
 </body>
 
 </html>
