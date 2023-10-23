@@ -19,7 +19,12 @@ export const js = () => {
         },
       })
     )
-    .pipe(app.plugins.if(app.isBuild, app.plugins.replace(/@img\//g, "/img/")))
+    .pipe(
+      app.plugins.if(
+        app.isBuild,
+        app.plugins.replace(/@img\//g, "../assets/img/")
+      )
+    )
     .pipe(app.plugins.replace(/@img\//g, "assets/img/"))
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(app.plugins.browsersync.stream());
