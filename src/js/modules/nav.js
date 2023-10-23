@@ -50,15 +50,6 @@ export function hideItemMenu() {
   }
 }
 
-export function burgerMenu() {
-  const burgerMenu = document.querySelector(".burger__menu");
-  const mainMenu = document.querySelector(".main__menu");
-  burgerMenu.addEventListener("click", () => {
-    burgerMenu.classList.toggle("active");
-    mainMenu.classList.toggle("active");
-  });
-}
-
 export function handleDropdownEvent(event) {
   const target = event.target;
   const dropdown = target.closest(".submenu");
