@@ -22,7 +22,7 @@ export const js = () => {
     .pipe(
       app.plugins.if(
         app.isBuild,
-        app.plugins.replace(/@img\//g, "../assets/img/")
+        app.plugins.replace(/@img\//g, "/assets/img/")
       )
     )
     .pipe(app.plugins.replace(/@img\//g, "assets/img/"))
