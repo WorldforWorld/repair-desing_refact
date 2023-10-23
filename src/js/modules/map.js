@@ -1,4 +1,14 @@
-export function initMap() {
+/**
+ * Функция создания карты
+ * @param {Array} coordinates - массив координат
+ * @param {string} linkToMaps - ссылка на яндекс карту
+ * @example
+ * initMap(
+ *   [47.208901, 39.631539],
+ *   "https://api-maps.yandex.ru/2.1/..."
+ * )
+ */
+export function initMap(coordinates, linkToMaps) {
   //Переменная для включения/отключения индикатора загрузки
   let spinner = document.querySelector(".contacts__map .loader");
   //Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
@@ -7,13 +17,13 @@ export function initMap() {
   //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
   function init() {
     let myMapTemp = new ymaps.Map("map-yandex", {
-      center: [47.208901, 39.631539], // координаты центра на карте
+      center: coordinates, // координаты центра на карте
       zoom: 9, // коэффициент приближения карты
       controls: ["zoomControl", "fullscreenControl"], // выбираем только те функции, которые необходимы при использовании
     });
     const pathMarker = window.location.href + "@img/theme/marker.png";
     let myPlacemarkTemp = new ymaps.Placemark(
-      [47.208901, 39.631539],
+      coordinates,
       {
         hintContent: "Наш офис",
         balloonContent: "Вход со двора",
@@ -115,13 +125,10 @@ export function initMap() {
           spinner.classList.add("is-active");
 
           // Загружаем API Яндекс.Карт
-          loadScript(
-            "https://api-maps.yandex.ru/2.1/?apikey=a0935634-5e5a-4ebb-94cb-26085c4739f8&lang=ru_RU",
-            function () {
-              // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
-              ymaps.load(init);
-            }
-          );
+          loadScript(linkToMaps, function () {
+            // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+            ymaps.load(init);
+          });
         }
       });
   };

@@ -1,3 +1,8 @@
+/**
+ * Валидатор для email
+ * @param {string} selector - селектор на input
+ * @example validEmail("#user-mail");
+ */
 export function validEmail(selector) {
   const inputsEmal = document.querySelectorAll(selector);
   inputsEmal.forEach(input => {

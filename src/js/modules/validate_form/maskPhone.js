@@ -1,3 +1,8 @@
+/**
+ * Маска и валидатор для телефона
+ * @param {string} selector - селектор на input
+ * @example maskPhone("#user-phone");
+ */
 export function maskPhone(selector) {
   [].forEach.call(document.querySelectorAll(selector), function (input) {
     var keyCode;

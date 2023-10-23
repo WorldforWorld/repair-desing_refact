@@ -1,8 +1,12 @@
 import { validEmail } from "./valid_email.js";
-
-export function validateForms(params) {
+/**
+ * Валидация формы
+ * @param {string} selector - селектор на форму для валидации
+ * @example validateForms(".control__form");
+ */
+export function validateForms(selector) {
   validEmail("#user-mail");
-  const froms = document.querySelector(params + " form");
+  const froms = document.querySelector(selector + " form");
   const checkbox = froms.querySelector(".policy__checkbox");
 
   froms.addEventListener("submit", e => {
@@ -27,6 +31,7 @@ export function validateForms(params) {
       froms.reset();
       popupSuccess();
       document.querySelector(".popup__call").classList.remove("open");
+      // Код отпавки формы
       console.log("Форма отправлена");
     }
     countErrors = 0;
