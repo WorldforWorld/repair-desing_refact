@@ -1,3 +1,4 @@
+import { burgerMenu } from "./modules/burgerMenu.js";
 import { isWebp } from "./modules/functions.js";
 import { initMap } from "./modules/map.js";
 import * as nav from "./modules/nav.js";
@@ -37,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", nav.handleDropdownEvent);
 
   // Бургер меню
-  nav.burgerMenu();
-  // Инициализируем слайдер в секции projects
+  burgerMenu(".burger__menu", ".main__menu");
+  // Инициализируем слайдеры
   slider();
   // Инициализируем карту
   initMap(
