@@ -8,8 +8,9 @@
 		}
 		<form action="#">
 			@@for (var i = 0; i < formGroup.length; i++) { <div class="form__group">
-				<label for="`+formGroup[i].idInput+`">`+formGroup[i].name+`</label>
-				<input type="`+formGroup[i].type+`" id="`+formGroup[i].idInput+`" placeholder="`+formGroup[i].placeholder+`">
+				<label for="`+formGroup[i].id+`">`+formGroup[i].name+`</label>
+				<input type="`+formGroup[i].type+`" id="`+formGroup[i].id+`" class="`+formGroup[i].class+`"
+					placeholder="`+formGroup[i].placeholder+`">
 	</div>
 	}
 	<button class="button button--primary">@@text_btn</button>
