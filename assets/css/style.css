@@ -5057,7 +5057,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
   padding: 24px 0;
   background-color: #131313;
   -webkit-box-shadow: 4px 4px 8px 0px transparent;
