@@ -3,6 +3,7 @@
   position: relative;
   h2 {
     z-index: 1;
+    color: $light;
   }
   &:before {
     content: "";
