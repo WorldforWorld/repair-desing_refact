@@ -38,11 +38,18 @@
     background-color: $black;
     max-width: rem(882);
     margin: 0 auto;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
     .form {
       &__wrap {
         max-width: rem(519);
         padding: rem(34) rem(15);
         margin: 0 auto;
+        @media (max-width: 767px) {
+          max-width: 100%;
+          padding: 0;
+        }
         form {
           display: flex;
           flex-wrap: wrap;
