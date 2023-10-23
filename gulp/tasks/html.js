@@ -1,7 +1,6 @@
-import fileinclude from 'gulp-file-include';
-import webpHtmlNosvg from 'gulp-webp-html-nosvg';
-import versionNumber from 'gulp-version-number';
-import pug from 'gulp-pug';
+import fileinclude from "gulp-file-include";
+import versionNumber from "gulp-version-number";
+import webpHtmlNosvg from "gulp-webp-html-nosvg";
 
 export const html = () => {
   return (
@@ -10,8 +9,8 @@ export const html = () => {
       .pipe(
         app.plugins.plumber(
           app.plugins.notify.onError({
-            title: 'HTML',
-            message: 'Error <%= error.message %>',
+            title: "HTML",
+            message: "Error <%= error.message %>",
           })
         )
       )
@@ -24,17 +23,17 @@ export const html = () => {
         verbose: true
       }))
       */
-      .pipe(app.plugins.replace(/@img\//g, 'assets/img/'))
+      .pipe(app.plugins.replace(/@img\//g, "assets/img/"))
       .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
       .pipe(
         app.plugins.if(
           app.isBuild,
           versionNumber({
-            value: '%DT%',
+            value: "%DT%",
             append: {
-              key: '_v',
+              key: "_v",
               cover: 0,
-              to: ['css', 'js'],
+              to: ["css", "js"],
             },
             /*
             output: {
