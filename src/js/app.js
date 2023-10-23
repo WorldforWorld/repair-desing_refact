@@ -41,5 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Инициализируем слайдер в секции projects
   slider();
   // Инициализируем карту
-  initMap();
+  initMap(
+    [47.208901, 39.631539],
+    "https://api-maps.yandex.ru/2.1/?apikey=a0935634-5e5a-4ebb-94cb-26085c4739f8&lang=ru_RU"
+  );
 });
