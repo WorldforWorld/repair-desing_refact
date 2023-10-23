@@ -11,6 +11,7 @@ export function initMap() {
       zoom: 9, // коэффициент приближения карты
       controls: ["zoomControl", "fullscreenControl"], // выбираем только те функции, которые необходимы при использовании
     });
+    const pathMarker = window.location.href + "@img/theme/marker.png";
     let myPlacemarkTemp = new ymaps.Placemark(
       [47.208901, 39.631539],
       {
@@ -22,7 +23,7 @@ export function initMap() {
         // Необходимо указать данный тип макета.
         iconLayout: "default#image",
         // Своё изображение иконки метки.
-        iconImageHref: "@img/theme/marker.png",
+        iconImageHref: pathMarker,
         // Размеры метки.
         iconImageSize: [32, 32],
         // Смещение левого верхнего угла иконки относительно
