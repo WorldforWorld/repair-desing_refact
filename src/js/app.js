@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   validateForms(".popup__call__form");
   new WOW().init();
   // Маска для телефонов c валидацией
-  maskPhone("#user-phone");
+  maskPhone(".user-phone");
   // Добавление поведения к нопки вверх
   scrollButtonTop("#upbutton");
   // Скролл для шапки

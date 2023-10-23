@@ -5,7 +5,7 @@ import { validEmail } from "./valid_email.js";
  * @example validateForms(".control__form");
  */
 export function validateForms(selector) {
-  validEmail("#user-mail");
+  validEmail(".user-mail");
   const froms = document.querySelector(selector + " form");
   const checkbox = froms.querySelector(".policy__checkbox");
 
