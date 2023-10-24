@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Controller, EffectFade } from "swiper";
+import Swiper, { Controller, EffectFade, Navigation, Pagination } from "swiper";
 export function slider() {
   // Подключение слайдера
   Swiper.use([Navigation, Pagination, Controller, EffectFade]);
@@ -89,11 +89,13 @@ export function slider() {
         return `<div class="${className}"><div class="${
           classCenter ? "center" : ""
         } ${classRight ? "right" : ""}">
-				<span class="steps__right__swiper__count">
-				${index + 1 > 9 ? index + 1 : "0" + (index + 1)}</span>
-				<span class="steps__right__swiper__desc">${arrBulletTittle[index]}</span>
-				</div>
-				</div>`;
+        <span class="steps__right__swiper__count">
+        ${index + 1 > 9 ? index + 1 : "0" + (index + 1)}</span>
+        <span class="steps__right__swiper__desc">${
+          arrBulletTittle[index]
+        }</span>
+        </div>
+        </div>`;
       },
     },
   });
